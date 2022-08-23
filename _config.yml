@@ -106,8 +106,8 @@ analytics:
 author:
   name             : "Bibeson Krishnadasan"
   avatar           : "/assets/image/close_up_profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person yo."
-  location         : "Somewhere"
+  bio              : "'Because of my ** Engineering Physics ** degree, i bring to the table a very diverse skillset and a passion for success...'"
+  location         : "Mississauga, Ontario"
   email            :
   links:
     - label: "Email"
