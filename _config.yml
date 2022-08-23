@@ -108,7 +108,7 @@ author:
   avatar           : "/assets/image/close_up_profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "'Because of my **Engineering** **Physics** degree, I bring to the table a very diverse skillset and a passion for **success**...'"
   location         : "Mississauga, Ontario"
-  email            :
+  email            : "Kbibeson@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
