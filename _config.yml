@@ -58,7 +58,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
+  hide                   : true # true, false (default)
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Bibeson Krishnadasan"
   avatar           : "/assets/image/close_up_profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "'Because of my **Engineering** **Physics** degree, I bring to the table a very diverse skillset and a passion for **success**...'"
+  bio              : "'Because of my **Engineering** **Physics** degree, what I bring to the table is a very diverse skillset and a passion for **success**...'"
   location         : "Mississauga, Ontario"
   email            : "Kbibeson@gmail.com"
   links:
@@ -284,6 +284,10 @@ defaults:
       path: ""
       type: posts
     values:
+##############################BiKr Edits#####################################################################
+      show_date: true
+      date_format: "%Y-%m-%d"
+##############################BiKr Edits#####################################################################
       layout: single
       author_profile: true
       read_time: true
