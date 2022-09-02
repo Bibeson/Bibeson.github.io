@@ -228,7 +228,7 @@ defaults:
     values:
       layout: single
       read_time: false
-      author_profile: false
+      author_profile: true #false
       share: false
       comments: false
       sidebar:
