@@ -231,7 +231,7 @@ defaults:
       author_profile: false
       share: false
       comments: false
-      sidebar: true
+      sidebar:
         nav: "docs"
   # _recipes
   - scope:
