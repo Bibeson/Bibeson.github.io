@@ -10,7 +10,6 @@ header:
       url: "/docs/quick-start-guide/"
 excerpt: >
   I’m a huge believer that you should never give up on your dreams and that hard work never fails. On this website you’ll find my milestone projects that illustrate how I’ve grown over the years.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.24.0">Latest release v4.24.0</a></small>
 feature_row:
   - image_path: /assets/images/mm-customizable-feature.png
     alt: "customizable"
