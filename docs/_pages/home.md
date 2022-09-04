@@ -1,5 +1,5 @@
 ---
-title: "yoaro0o"
+title: "Our journey begins"
 layout: splash
 permalink: /
 header:
@@ -9,7 +9,7 @@ header:
     - label: "<i class='fas fa-download'></i> Install now"
       url: "/docs/quick-start-guide/"
 excerpt: >
-  A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
+  I’m a huge believer that you should never give up on your dreams and that hard work never fails. On this website you’ll find my milestone projects that illustrate how I’ve grown over the years.<br />
   <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.24.0">Latest release v4.24.0</a></small>
 feature_row:
   - image_path: /assets/images/mm-customizable-feature.png
