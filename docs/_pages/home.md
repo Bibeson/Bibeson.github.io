@@ -1,5 +1,5 @@
 ---
-title: "yoaroo"
+title: "yoaro0o"
 layout: splash
 permalink: /
 header:
