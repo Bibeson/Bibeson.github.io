@@ -5,7 +5,9 @@ permalink: /
 header:
   overlay_color: "#5e616c"
   overlay_image: /assets/images/home_page.jpg
-excerpt: >
+excerpt:
+color: #000;
+>
   I’m a huge believer that you should never give up on your dreams and that hard work never fails. On this website you’ll find my milestone projects that illustrate how I’ve grown over the years.<br />
 feature_row:
   - image_path: /assets/images/mm-customizable-feature.png
