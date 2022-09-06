@@ -8,7 +8,7 @@ header:
 excerpt: >
   I’m a huge believer that you should never give up on your dreams and that hard work never fails. On this website you’ll find my milestone projects that illustrate how I’ve grown over the years.<br />
 feature_row:
-  - image_path: /assets/images/mm-customizable-feature.png
+  - image_path: /assets/images/ultrasonic_range_finder.jpg
     alt: "customizable"
     title: "Super customizable"
     excerpt: "Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter."
