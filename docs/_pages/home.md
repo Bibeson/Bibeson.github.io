@@ -11,24 +11,24 @@ feature_row:
   - image_path: /assets/images/ultrasonic_range_finder.jpg
     alt: "customizable"
     title: "University Projects"
-    excerpt: "As an Engineering Physics graduate I hope to show you my extensive experience in software, electrical and mechanical design and development. Here you'll find a range of projects that I'm proud.     "
+    excerpt: "As an Engineering Physics graduate I hope to show you my extensive experience in software, electrical and mechanical design and development. Here you'll find a range of projects that I'm proud of.     "
     url: "/docs/configuration/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
   - image_path: /assets/images/STARS_home_page.png
     alt: "fully responsive"
     title: "Dean's Choice awarded Capstone Project"
-    excerpt: "The prefect project that challenged a team of four and I, where we caught the attention of CHCH news, Hamilton's local news network and the praise of our Professor! "
+    excerpt: "The perfect project that challenged a team of four and I, where we caught the attention of CHCH news, Hamilton's local news network and the praise of our Professor! "
     url: "/docs/layouts/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
   - image_path: /assets/images/grader_home_page.jpg
     alt: "100% free"
     title: "Grader Project"
-    excerpt: "By far my proudest and coolest achievement thus far in my career "
+    excerpt: "An enourmous undertaking as the **main Controls Designer** for this project. Where I took a major step into the mining industry and by taking that step applied everything I knew as an Engineering Physics graduate. Definitly my proudest achievement thus far!   "
     url: "/docs/license/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
+    btn_label: "Find out more"      
 ---
 
 {% include feature_row %}
