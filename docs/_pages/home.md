@@ -11,7 +11,8 @@ feature_row:
   - image_path: /assets/images/ultrasonic_range_finder.jpg
     alt: "customizable"
     title: "University Projects"
-    excerpt: "As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of.                                                           "
+    excerpt: >
+    As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of. <br />
     url: "/docs/configuration/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
