@@ -11,14 +11,14 @@ feature_row:
   - image_path: /assets/images/ultrasonic_range_finder.jpg
     alt: "customizable"
     title: "University Projects"
-    excerpt: "As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of.     "
+    excerpt: "As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of.                                                           "
     url: "/docs/configuration/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
   - image_path: /assets/images/STARS_home_page.png
     alt: "fully responsive"
     title: "Dean's Choice awarded Capstone Project"
-    excerpt: "The perfect project that challenged a **team of four and I**, where we caught the attention of **CHCH news**, Hamilton's local news network and the **praise of our professor**! "
+    excerpt: "The perfect project that challenged a **team of four and I**, where we caught the attention of **CHCH news**, Hamilton's local news network and the **praise of our professor**!                                                                                 "
     url: "/docs/layouts/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
