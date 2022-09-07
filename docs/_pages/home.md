@@ -19,7 +19,8 @@ feature_row:
   - image_path: /assets/images/STARS_home_page.png
     alt: "fully responsive"
     title: "Dean's Choice awarded Capstone Project"
-    excerpt: "The perfect project that challenged a **team of four and I**, where we caught the attention of **CHCH news**, Hamilton's local news network and the **praise of our professor**!                                                                                 "
+    excerpt: >
+      The perfect project that challenged a **team of four and I**, where we caught the attention of **CHCH news**, Hamilton's local news network and the **praise of our professor**! <br /><br />
     url: "/docs/layouts/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
