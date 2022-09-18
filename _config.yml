@@ -99,7 +99,7 @@ analytics:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : "/assets/images/close_up_profile.jpg"
-  bio              : " 'Because of my **Engineering** **Physics** degree, what I bring to the table is a very diverse skillset and a passion for success..."
+  bio              : " 'Because of my **Engineering** **Physics** degree, what I bring to the table is a very diverse skillset and a passion for success...' "
   location         : "Mississauga, ON"
   links:
     - label: "Email"
