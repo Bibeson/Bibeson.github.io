@@ -153,10 +153,10 @@ While reverse engineering the joysticks characteristics I realized that the outp
 Controller requirements (supply voltage 24 (Vb)):
 
   Signal ON
-  * > (0.7(Vb) = 16.8V)
+  *  > (0.7(Vb) = 16.8V)
     
   Signal OFF
-  * < (0.3(Vb) = 7.2V)
+  *  < (0.3(Vb) = 7.2V)
 
 Joystick Output (PWM)
   * Peak-to-peak voltage = 7.2V
