@@ -20,8 +20,8 @@ As the main Controls Designer, I definitely felt the weight and responsibility o
 ### Research
 
 The research I conducted for this project was extensive in the following areas:
-
-  * Engine controller ![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/research_grad.jpg){: .align-right}
+![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/research_grad.jpg){: .align-right}
+  * Engine controller
   * Hydrostatic controller
   * SIL (Safety Integrity Level) 2 requirements and implementations on fail-safe controllers
   * Configuration of I/O modules and peripheral ECU (electronic control unit)
