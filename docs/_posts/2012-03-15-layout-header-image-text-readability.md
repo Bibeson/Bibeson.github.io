@@ -19,8 +19,8 @@ As the main Controls Designer, I definitely felt the weight and responsibility o
 
 ### Research
 
-The research I conducted for this project was extensive in the following areas:![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/research_grad.jpg){: .align-right}
-
+The research I conducted for this project was extensive in the following areas:
+![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/research_grad.jpg){: .align-right}
   * Engine controller
   * Hydrostatic controller
   * SIL (Safety Integrity Level) 2 requirements and implementations on fail-safe controllers
