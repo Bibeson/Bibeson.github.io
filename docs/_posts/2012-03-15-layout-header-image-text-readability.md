@@ -18,8 +18,8 @@ Working at MEDATech Engineering Services I was able to build upon my undergradua
 As the main Controls Designer, I definitely felt the weight and responsibility of this opportunity and had to rise to the occasion. So, I left no stone unturned. Like many in my position I wanted to know everything there was to this Grader and relied on my experience as well as my superiors advice to guide me through it all.
 
 ### Research
-![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/research_grad.jpg){: .align-right}
-The research I conducted for this project was extensive in the following areas:
+
+The research I conducted for this project was extensive in the following areas:![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/research_grad.jpg){: .align-right}
 
   * Engine controller
   * Hydrostatic controller
