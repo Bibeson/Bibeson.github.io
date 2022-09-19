@@ -11,6 +11,65 @@ tags:
 
 Working at MEDATech Engineering Services I was able to build upon my undergraduate experience in Software and Electrical design and development. I spent most of my time here around nine months developing a drive-by-wire diesel-powered grader system.
 
+## Responsibilities
+
+As the main Controls Designer, I definitely felt the weight and responsibility of this opportunity and had to rise to the occasion. So, I left no stone unturned. Like many in my position I wanted to know everything there was to this grader and relied on my experience as well as my superiors advice to guide me through it all.
+
+### Research
+
+The research I conducted for this project was extensive in the following areas:
+
+  * Engine controller
+  * Hydrostatic controller
+  * SIL (Safety Integrity Level) 2 requirements and implementations on fail-safe controllers
+  * Configuration of I/O modules and peripheral ECU (electronic control unit)
+  * Client documentation
+
+For both the engine and hydrostatic controllers I read and understood the associated documentation (data sheets and manuals). I would learn specific topics within this manual concerning functional requirements from the client such as throttle limitation, cold starting, engine and exhaust braking to name a few. Once I was familiar with the content, I would be the lead in meetings with the OEM requesting time with their technical support. I would question their technical support to clear doubts I had as well as informing them on discrepancies in their documentation. During these meetings I would also confirm with the technical team what I knew regarding how to enable certain functionalities through their specific proprietary software. There would be regular meetings with the client regarding functionalities they wanted to add on.
+
+Cumulating all these resources I would confidently start to configure each controller to their required specification while adhering to safety requirements outlined in the manuals to uphold SIL 2 standards. Adhering to these requirements meant that I needed to communicate with not just one message but a system of primary and redundant messages. This allowed their systems to perform their own fail-safe protocols (request idle engine RPM, limp mode, disable steering, etc) in the event of loss of communications or discrepancies in the information being transmitted/received. These fail-safes are also triggered by checksums, heartbeat counters pr internal request. On the master controller where I wrote the main program, I had to also carry on the same SIL 2 requirements. To ensure that I follow the correct requirements and implementation I read and understood CODESYS Safety SIL2 – IEC Programming Guidelines. Through this document I adhered to standards such as:
+
+  * EN13849
+  * EN62061
+  * IEC61508
+  * IEC61131-3
+
+Following safety requirements such as:
+
+  * Source code reviews
+  * Use of libraries
+  * Floating point operations
+  * Non-naturally-aligned structures
+  * Multitasking and I/Os
+  * Multiple mapping of I/Os
+  * Use of the operators AND_THEN / OR_ELSE
+  * Calculation of safe outputs
+  * I/O devices without SAFE data types
+  * CANopen Safety Stack: cross-communication
+
+That document helped define rules I needed to follow when coding the main program. Even though the clients defined the functional requirements it was our in-house team of engineers that conducted the PHA (Process Hazard Analysis) meetings, following other ISO standards (ISO 15998,#####) . In these meetings I contributed little and made it a point to learn as much as I could from the way the senior engineers would simplify problems to bring about safe measures to dangerous outcomes.
+
+I also read documentation regarding I/O modules and peripheral ECU’s (electronic control units) to configure them to our purposes for the grader. Communication with the I/O modules were crucial due to having many sensors throughout the grader. This eliminated unnecessary wiring and allowed information to be transmitted through the many CAN networks to be received by the master controller. The documentation for the peripheral ECU’s helped interpreting the values and error codes being sent over the CAN Network. The peripheral ECU’s that I worked with are as follows:
+
+  * Wheel angle sensors
+  * Linear position sensors
+  * Steering valve
+  * Articulation valve
+  * CAN switches
+
+Regarding these ECU’s I needed to configure their source address, baud rate and heartbeat counter interval while adhering to safety requirements like rolling counters, checksums, and primary and redundant messaging. Specifically, to the steering valve I did extensive research into implementing Ackerman steering and the mathematical relationships that need to be maintained regarding the left and right wheel angles.
+
+While configuring all these components I constantly had to refer to client documentation from their internal repository, to find everything from required parameters for the steering and articulation valves (distance between articulation pivot point and front wheel axle, length of the vehicle, etc) to vehicle characteristics like (idle RPM, max required turning radius/angle, etc). 
+
+This project reconfirmed my notion that research is crucial to building a safe product. Where I had to rely on my interpersonal skills heavily during this phase of the development. Skills like communication, creativity, adaptability, collaboration, and leadership would be the reasons why I felt like everyone had my back during this whole process.
+
+### Concept design / design analysis
+
+Here I wrote and designed the architecture of the software through control/process flow charts, network diagrams and state flow diagrams. I was advised to make the decision to create the master program using as many function blocks through structure text (ST) as I could. This seemed to be the best way forward so that in the event of an issue arising from not complying with any safety requirements, it would be isolated to a minor function block. Additionally, I would use as many SIL 2 certified safety function blocks as I could, as there were already certified. I was responsible for developing the control system for steering, articulation, moldboard functionality, drive, and safe state responses.
+
+Steering Control System
+  * Closed loop control
+
 This is a sample post with a large feature image[^1] up top and tons of text. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
 
 Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. *Ea fashion axe [Marfa cillum aliquip](#). Retro Bushwick keytar cliche.* Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
