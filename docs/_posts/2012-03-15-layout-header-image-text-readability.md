@@ -153,14 +153,14 @@ While reverse engineering the joysticks characteristics I realized that the outp
 Controller requirements (supply voltage 24 (Vb)):
 
   Signal ON
-    * > (0.7(Vb) = 16.8V)
+  * > (0.7(Vb) = 16.8V)
     
   Signal OFF
-    * < (0.3(Vb) = 7.2V)
+  * < (0.3(Vb) = 7.2V)
 
 Joystick Output (PWM)
-    * Peak-to-peak voltage = 7.2V
-    * Avg. voltage = 15.2V
+  * Peak-to-peak voltage = 7.2V
+  * Avg. voltage = 15.2V
 
 Given this information the senior electrical engineer recommended I use an optocoupler. I did some research into how they work and what it can do for the test bench and found out it works like a MOSFET. I wanted to test if this would work and bought from amazon an optocoupler that represented the type of input/output characteristics I required. Initially, my implementations of the optocoupler didn’t exactly match what I needed. The peak-to-peak voltage was much larger now, but it still didn’t cross below the crucial 7.2V threshold. I therefore looked for some guidance through our Electrical P.Eng for some advice on the issue. I explained the joystick input characteristics going into the optocoupler and explained the basic circuitry of the optocoupler I bought. After some discussion with the P.Eng he made me realize that the optocoupler I bought was incorrectly designed. Knowing the board itself was wrong and my knowledge of how an optocoupler works I started to question which part of this basic board needed some adjusting. I added a smaller resistor to the back of the board and removed the larger one, and it worked. Even though the change was a simple one I learnt a valuable lesson reconfirming that I should always think out of the box. I used this board for my bench testing and later the P.Eng bought an industrial grade optocoupler for the actual grader.
 
