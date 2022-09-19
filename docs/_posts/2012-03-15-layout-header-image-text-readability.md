@@ -1,8 +1,8 @@
 ---
-title: "Layout: Header Imagearoo and Text Readability"
+title: "Grader Project"
 header:
-  image: /assets/images/Grader_article_home.jpg
-  # caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  image: /assets/images/unsplash-image-4.jpg
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 tags: 
   - sample post
   - readability
