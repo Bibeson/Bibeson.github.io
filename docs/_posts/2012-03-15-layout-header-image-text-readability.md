@@ -2,12 +2,14 @@
 title: "Grader Project"
 header:
   image: /assets/images/Grader_article_home.jpg
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  # caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 tags: 
   - sample post
   - readability
   - test
 ---
+
+Working at MEDATech Engineering Services I was able to build upon my undergraduate experience in Software and Electrical design and development. I spent most of my time here around nine months developing a drive-by-wire diesel-powered grader system.
 
 This is a sample post with a large feature image[^1] up top and tons of text. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
 
