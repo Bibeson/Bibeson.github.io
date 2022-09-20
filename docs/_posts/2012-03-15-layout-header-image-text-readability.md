@@ -73,18 +73,19 @@ Here I wrote and designed the architecture of the software through control/proce
 
 Steering Control System
 ![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
-  (* Closed loop control
+  * Closed loop control
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
       * Built relationship between joystick signal and requested wheel position
     * Implemented with electrohydraulic steering valve
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
   * Ackerman steering
   * Implemented communication between master controller and electrohydraulic steering valve
   * Safety checks
     * Three individual steering input signals
       * If on signal is lost, system can still operate with a set of primary (second) and redundant (third) signals
     * Wheel misalignment algorithm
-      * Interpreted data collected from client regarding left and right wheel position relationship)
+      * Interpreted data collected from client regarding left and right wheel position relationship
 {: style="text-align: right;"}
 Articulation Control System
 
