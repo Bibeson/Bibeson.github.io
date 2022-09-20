@@ -85,7 +85,7 @@ Steering Control System
       * If on signal is lost, system can still operate with a set of primary (second) and redundant (third) signals
     * Wheel misalignment algorithm
       * Interpreted data collected from client regarding left and right wheel position relationship
-
+{: style="text-align: right;"}
 Articulation Control System
 
   * Closed loop control
