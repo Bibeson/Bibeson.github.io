@@ -76,11 +76,9 @@ Steering Control System
   * Closed loop control
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
-
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
-
       * Built relationship between joystick signal and requested wheel position
     * Implemented with electrohydraulic steering valve
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
   * Ackerman steering
   * Implemented communication between master controller and electrohydraulic steering valve
   * Safety checks
