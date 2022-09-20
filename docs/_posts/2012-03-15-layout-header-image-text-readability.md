@@ -77,6 +77,7 @@ Steering Control System
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
 ![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
+  *
       * Built relationship between joystick signal and requested wheel position
     * Implemented with electrohydraulic steering valve
   * Ackerman steering
