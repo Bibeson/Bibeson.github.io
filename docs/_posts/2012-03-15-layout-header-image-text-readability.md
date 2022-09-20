@@ -9,7 +9,7 @@ tags:
   - test
 ---
 
-Working at MEDATech Engineering Services I was able to build upon my undergraduate experience in Software and Electrical design and development. I spent most of my time here around nine months developing a Non-certified SIL 2 drive-by-wire diesel-powered grader system.
+Working at MEDATech Engineering Services I was able to build upon my undergraduate experience in Software and Electrical design and development. I spent most of my time here around nine months developing a **Non-certified SIL 2 drive-by-wire diesel-powered grader system**.
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/responsibilities_grad.jpg){: .align-center}
 
@@ -29,8 +29,8 @@ The research I conducted for this project was extensive in the following areas:
 
 For both the engine and hydrostatic controllers I read and understood the associated documentation (data sheets and manuals). I would learn specific topics within these manuals concerning functional requirements from the client such as throttle limitation, cold starting, engine and exhaust braking to name a few. Once I was familiar with the content, I would be the lead in meetings with the OEM requesting time with their technical support. I would question their technical support to clear doubts I had as well as informing them on discrepancies in their documentation. During these meetings I would also confirm with the technical team what I knew regarding how to enable certain functionalities through their specific proprietary software. There would also be regular meetings with the client regarding functionalities they wanted to add on.
 
-Cumulating all these resources I would confidently start to configure each controller to their required specification while adhering to safety requirements outlined in the manuals to uphold SIL 2 standards. Adhering to these requirements meant that I needed to communicate with not just one message but a system of primary and redundant messages. This allowed their systems to perform their own fail-safe protocols (request idle engine RPM, limp mode, disable steering, etc) in the event of loss of communications or discrepancies in the information being transmitted/received. These fail-safes are also triggered by checksums, heartbeat counters pr internal request. On the master controller where I wrote the main program, I had to also carry on the same SIL 2 requirements. To ensure that I follow the correct requirements and implementation I read and understood CODESYS Safety SIL2 – IEC Programming Guidelines. Through this document I adhered to standards such as:
-
+Cumulating all these resources I would confidently start to configure each controller to their required specification while adhering to safety requirements outlined in the manuals to uphold SIL 2 standards. Adhering to these requirements meant that I needed to communicate with not just one message but a system of primary and redundant messages. This allowed their systems to perform their own fail-safe protocols (request idle engine RPM, limp mode, disable steering, etc) in the event of loss of communications or discrepancies in the information being transmitted/received. These fail-safes are also triggered by checksums, heartbeat counters or internal request. On the master controller where I wrote the main program, I had to also carry on the same SIL 2 requirements. To ensure that I follow the correct requirements and implementation I read and understood CODESYS Safety SIL2 – IEC Programming Guidelines. Through this document I adhered to standards such as:
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/image-alignment-150x150.jpg){: .align-left}
   * EN13849
   * EN62061
   * IEC61508
@@ -49,7 +49,7 @@ Following safety requirements such as:
   * I/O devices without SAFE data types
   * CANopen Safety Stack: cross-communication
 
-That document helped define rules I needed to follow when coding the main program. Even though the clients defined the functional requirements it was our in-house team of engineers that conducted the PHA (Process Hazard Analysis) meetings, following other ISO standards (ISO 15998,#####) . In these meetings I contributed little and made it a point to learn as much as I could from the way the senior engineers would simplify problems to bring about safe measures to dangerous outcomes.
+That document helped define rules I needed to follow when coding the main program. Even though the clients defined the functional requirements it was our in-house team of engineers that conducted the PHA (Process Hazard Analysis) meetings, following other ISO standards (ISO 15998,13849). In these meetings I contributed little and made it a point to learn as much as I could from the way the senior engineers would simplify problems to bring about safe measures to dangerous outcomes.
 
 I also read documentation regarding I/O modules and peripheral ECU’s (electronic control units) to configure them to our purposes for the grader. Communication with the I/O modules were crucial due to having many sensors throughout the grader. This eliminated unnecessary wiring and allowed information to be transmitted through the many CAN networks to be received by the master controller. The documentation for the peripheral ECU’s helped interpreting the values and error codes being sent over the CAN Network. The peripheral ECU’s that I worked with are as follows:
 
