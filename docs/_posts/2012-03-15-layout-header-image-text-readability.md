@@ -72,7 +72,7 @@ This project reconfirmed my notion that research is crucial to building a safe p
 Here I wrote and designed the architecture of the software through control/process flow charts, network diagrams and state flow diagrams. I was advised to make the decision to create the master program using as many function blocks through structure text (ST) as I could. This seemed to be the best way forward so that in the event of an issue arising from not complying with any safety requirements, it would be isolated to a minor function block. Additionally, I would use as many SIL 2 certified safety function blocks as I could, as there were already certified. I was responsible for developing the control system for steering, articulation, moldboard functionality, drive, and safe state responses.
 
 Steering Control System
-
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_grad.jpg){: .align-left}
   * Closed loop control
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
@@ -294,5 +294,5 @@ Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfi
 Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney's selfies. Odd Future Banksy non authentic.
 
 Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.
-
+{: style="text-align: right;"}
 [^1]: Texture image courtesty of [Lovetextures](http://www.lovetextures.com/)
