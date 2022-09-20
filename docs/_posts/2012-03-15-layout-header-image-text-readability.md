@@ -58,7 +58,7 @@ I also read documentation regarding I/O modules and peripheral ECU’s (electron
   * Steering valve
   * Articulation valve
   * CAN switches
-
+![no-alignment]({{ site.url }}{{ site.baseurl }}/assets/images/Components_Grad.PNG)
 Regarding these ECU’s I needed to configure their source address, baud rate and heartbeat counter interval while adhering to safety requirements like rolling counters, checksums, and primary and redundant messaging. Specifically, to the steering valve I did extensive research into implementing Ackerman steering and the mathematical relationships that need to be maintained regarding the left and right wheel angles.
 
 While configuring all these components I constantly had to refer to client documentation from their internal repository, to find everything from required parameters for the steering and articulation valves (distance between articulation pivot point and front wheel axle, length of the vehicle, etc) to vehicle characteristics like (idle RPM, max required turning radius/angle, etc). 
