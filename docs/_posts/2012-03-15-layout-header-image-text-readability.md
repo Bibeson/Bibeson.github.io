@@ -72,14 +72,14 @@ This project reconfirmed my notion that research is crucial to building a safe p
 Here I wrote and designed the architecture of the software through control/process flow charts, network diagrams and state flow diagrams. I was advised to make the decision to create the master program using as many function blocks through structure text (ST) as I could. This seemed to be the best way forward so that in the event of an issue arising from not complying with any safety requirements, it would be isolated to a minor function block. Additionally, I would use as many SIL 2 certified safety function blocks as I could, as there were already certified. I was responsible for developing the control system for steering, articulation, moldboard functionality, drive, and safe state responses.
 
 Steering Control System
-
-  * Closed loop control
 ![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
+  * Closed loop control
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
       * Built relationship between joystick signal and requested wheel position
     * Implemented with electrohydraulic steering valve
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
   * Ackerman steering
   * Implemented communication between master controller and electrohydraulic steering valve
   * Safety checks
