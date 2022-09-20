@@ -76,9 +76,9 @@ Steering Control System
   * Closed loop control
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
+![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
       * Built relationship between joystick signal and requested wheel position
     * Implemented with electrohydraulic steering valve
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
   * Ackerman steering
   * Implemented communication between master controller and electrohydraulic steering valve
   * Safety checks
@@ -86,7 +86,7 @@ Steering Control System
       * If on signal is lost, system can still operate with a set of primary (second) and redundant (third) signals
     * Wheel misalignment algorithm
       * Interpreted data collected from client regarding left and right wheel position relationship
-{: style="text-align: right;"}
+
 Articulation Control System
 
   * Closed loop control
