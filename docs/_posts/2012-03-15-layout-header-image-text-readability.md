@@ -31,7 +31,7 @@ For both the engine and hydrostatic controllers I read and understood the associ
 
 Cumulating all these resources I would confidently start to configure each controller to their required specification while adhering to safety requirements outlined in the manuals to uphold SIL 2 standards. Adhering to these requirements meant that I needed to communicate with not just one message but a system of primary and redundant messages. This allowed their systems to perform their own fail-safe protocols (request idle engine RPM, limp mode, disable steering, etc) in the event of loss of communications or discrepancies in the information being transmitted/received. These fail-safes are also triggered by checksums, heartbeat counters or internal request. On the master controller where I wrote the main program, I had to also carry on the same SIL 2 requirements. To ensure that I follow the correct requirements and implementation I read and understood CODESYS Safety SIL2 – IEC Programming Guidelines. Through this document I adhered to standards such as:
 
-  * EN13849![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/ISO_IEC_grad.jpeg){: .align-left}
+  * EN13849![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/ISO_IEC_grad.jpeg){: .align-right}
   * EN62061
   * IEC61508
   * IEC61131-3
