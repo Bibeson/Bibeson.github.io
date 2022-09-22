@@ -71,10 +71,8 @@ This project reconfirmed my notion that research is crucial to building a safe p
 
 Here I wrote and designed the architecture of the software through control/process flow charts, network diagrams and state flow diagrams. I was advised to make the decision to create the master program using as many function blocks through structure text (ST) as I could. This seemed to be the best way forward so that in the event of an issue arising from not complying with any safety requirements, it would be isolated to a minor function block. Additionally, I would use as many SIL 2 certified safety function blocks as I could, as there were already certified. I was responsible for developing the control system for steering, articulation, moldboard functionality, drive, and safe state responses.
 
-Steering Control System
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Steering_Grad.jpg){: .align-left}
+#### Steering Control System
+
   * Closed loop control
     * Wheel angle sensor (feedback signal)
     * Joystick position (input signal)
@@ -88,7 +86,7 @@ Steering Control System
     * Wheel misalignment algorithm
       * Interpreted data collected from client regarding left and right wheel position relationship
 
-Articulation Control System
+#### Articulation Control System
 
   * Closed loop control
     * Linear position sensors (feedback signal)
@@ -96,7 +94,7 @@ Articulation Control System
     * Implemented with electrohydraulic articulation valve
   * Implemented communication between master controller and electrohydraulic articulation valve
 
-Moldboard Control System
+#### Moldboard Control System
 
   * Open loop control
     * Joystick button position (input signal)
@@ -106,7 +104,7 @@ Moldboard Control System
   * Safety checks
     * Directional dual channel feedback sensors (valve)
 
-Drive Control System
+#### Drive Control System
 
   * Closed loop control
     * Drive pedal (input signal)
@@ -116,7 +114,7 @@ Drive Control System
   * Safety checks
     * Dual channel drive pedal
 
-Safe State Response Control System
+#### Safe State Response Control System
 
   * Monitoring status of all components
     * Safety checks
