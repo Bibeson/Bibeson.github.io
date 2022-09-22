@@ -71,6 +71,7 @@ This project reconfirmed my notion that research is crucial to building a safe p
 
 Here I wrote and designed the architecture of the software through control/process flow charts, network diagrams and state flow diagrams. I was advised to make the decision to create the master program using as many function blocks through structure text (ST) as I could. This seemed to be the best way forward so that in the event of an issue arising from not complying with any safety requirements, it would be isolated to a minor function block. Additionally, I would use as many SIL 2 certified safety function blocks as I could, as there were already certified. I was responsible for developing the control system for steering, articulation, moldboard functionality, drive, and safe state responses.
 
+
 #### Steering Control System
 
   * Closed loop control
@@ -85,6 +86,7 @@ Here I wrote and designed the architecture of the software through control/proce
       * If on signal is lost, system can still operate with a set of primary (second) and redundant (third) signals
     * Wheel misalignment algorithm
       * Interpreted data collected from client regarding left and right wheel position relationship
+{: .notice--info}
 
 #### Articulation Control System
 
@@ -93,6 +95,7 @@ Here I wrote and designed the architecture of the software through control/proce
       * Built relationship between joystick signal and requested angle
     * Implemented with electrohydraulic articulation valve
   * Implemented communication between master controller and electrohydraulic articulation valve
+{: .notice--warning}
 
 #### Moldboard Control System
 
@@ -103,6 +106,7 @@ Here I wrote and designed the architecture of the software through control/proce
       * Linear and parabolic characteristics (ability to feather)
   * Safety checks
     * Directional dual channel feedback sensors (valve)
+{: .notice--danger}
 
 #### Drive Control System
 
@@ -113,7 +117,7 @@ Here I wrote and designed the architecture of the software through control/proce
   * Implemented communications between master controller, hydrostatic and engine controller
   * Safety checks
     * Dual channel drive pedal
-
+{: .notice--success}
 #### Safe State Response Control System
 
   * Monitoring status of all components
@@ -145,6 +149,7 @@ Here I wrote and designed the architecture of the software through control/proce
       * Limp mode
   * Recovery
     * Cycle Ignition
+{: .notice--primary}
 
 I heavily relied on the notes I took during the PHA meeting as well as the advice of the senior engineers when creating the safe state response control system. These PHA meetings with the client and team led to discussions regarding what was an appropriate measure to take in the event of a specific fault. Once the code was written at multiple stages there were code reviews with the client’s software team.
 
