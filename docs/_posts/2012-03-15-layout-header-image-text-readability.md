@@ -177,11 +177,13 @@ Given this information the senior electrical engineer recommended I use an optoc
 
 {% include video id="753056812" provider="vimeo" %}
 
-I played a small role regarding the steering axle test bench setup, but I turned it into a learning experience by talking with the hydraulic team regarding the various components they needed to consider when constructing this setup. They first did the crimping of the hoses to the right size and pressure. Connecting the axle to the electrohydraulic valve and back to the power pack, which acted as our engine. This supplyed the required pressure for the system so that when I give the command to the valve to open the fluid turns the wheels.
+I played a small role regarding the steering axle test bench setup, but I turned it into a learning experience by talking with the hydraulic team regarding the various components they needed to consider when constructing this setup. They first did the crimping of the hoses to the right size and pressure rating. Connecting the axle to the electrohydraulic valve and back to the power pack, which acted as our engine. This supplyed the required pressure for the system so that when I give the command to the valve to open the fluid turns the wheels.
 
 ### Testing
 
 Once my test bench was completely wired, I began to test and troubleshoot errors as they popped up. The first thing I wanted to confirm was CAN communications between the individual controllers and associated sensors.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/CAN_messages.PGN){: .align-center}
 
 Troubleshooting CAN errors
 
