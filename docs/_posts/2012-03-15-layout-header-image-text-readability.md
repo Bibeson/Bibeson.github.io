@@ -185,7 +185,7 @@ Once my test bench was completely wired, I began to test and troubleshoot errors
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/CAN_messages.PNG){: .align-center}
 
-Troubleshooting CAN errors
+#### Troubleshooting CAN errors
 
   * Termination
     * Having each CAN network terminated with a 60 ohm resister
@@ -219,7 +219,7 @@ After that day I felt that this project was truly mine and if the Grader was goi
 
 While reading through the documentation and creating the software I planned to test certain functionality and learnt some other criteria from the operators that rode the Grader.
 
-Functional Checks
+#### Functional Checks
  
   * High lift float
   * Proportional gains tuned
@@ -232,20 +232,20 @@ Functional Checks
     * Steer (articulation)
     * Accelerator
 
-Safety Checks (safe state)
+#### Safety Checks (safe state)
 
   * Steering faults
   * Braking faults
   * Drive system faults
 
-Other Checks
+#### Other Checks
  
   * Drive motor speeds adjust when articulation operated
   * Drive system responds properly to a sudden change from FWD to REV and vice versa
   * Hydraulic oil temperature
     * Fans
 
-Start Up Tests
+#### Start Up Tests
 
   * Engine start
   * Pump pressure
@@ -257,7 +257,7 @@ Start Up Tests
   * FWD / REV direction
   * Service brakes
 
-Mobile Tests
+#### Mobile Tests
 
   * 1st/2nd/3rd gear
     * Speeds
