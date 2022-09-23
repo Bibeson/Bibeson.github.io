@@ -53,6 +53,14 @@ Following safety requirements such as:
 
 That document helped define rules I needed to follow when coding the main program. Even though the clients defined the functional requirements it was our in-house team of engineers that conducted the PHA (Process Hazard Analysis) meetings, following other ISO standards (ISO 15998,13849). In these meetings I contributed little and made it a point to learn as much as I could from the way the senior engineers would simplify problems to bring about safe measures to dangerous outcomes.
 
+| Dangerous Situation | Avoidance Measure | Software Requirements |
+|:--------|:-------:|--------:|
+| Unintended Startup   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) * Joystick transmission modes (N/F/R) * Brake pressure sensors * Operator seat contact sensor * Seat belt sensor   |
+| Unintended movement (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel * Moldboard valves enable button * Operator seat contact sensor * Feedback sensors * Joystick command|
+|----
+| Intended movement (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel * Moldboard valves enable button * Operator seat contact sensors * Feedback sensors * Joystick command   |
+{: rules="groups"}
+
 I also read documentation regarding I/O modules and peripheral ECU’s (electronic control units) to configure them to our purposes for the grader. Communication with the I/O modules were crucial due to having many sensors throughout the grader. This eliminated unnecessary wiring and allowed information to be transmitted through the many CAN networks to be received by the master controller. The documentation for the peripheral ECU’s helped interpreting the values and error codes being sent over the CAN Network. The peripheral ECU’s that I worked with are as follows:
 
   * Wheel angle sensors
