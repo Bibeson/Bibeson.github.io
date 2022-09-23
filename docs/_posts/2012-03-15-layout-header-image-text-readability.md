@@ -183,7 +183,7 @@ I played a small role regarding the steering axle test bench setup, but I turned
 
 Once my test bench was completely wired, I began to test and troubleshoot errors as they popped up. The first thing I wanted to confirm was CAN communications between the individual controllers and associated sensors.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/CAN_messages.PGN){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/CAN_messages.PNG){: .align-center}
 
 Troubleshooting CAN errors
 
