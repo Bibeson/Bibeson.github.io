@@ -159,6 +159,8 @@ Due to covid, the lead times on multiple components were delayed,![image-right](
 
 While reverse engineering the joysticks characteristics I realized that the output voltage range of the joystick that I saw using an oscilloscope (unfortunately the datasheet for the joystick wasn’t attainable) couldn’t be interpreted by the safety controller. This was verified through the safety controller’s data sheet. This presented a problem because the client couldn’t order different joysticks that worked with the safety controller. This again was due to long lead times for the item which wasn’t possible within the project timeline. I wanted to give the senior electrical engineer as much information as I could. I presented the data sheet explaining the requirements of the safety controller’s input for a PWM signal and the thresholds it needed to achieve for the controller to interpret it as signal on and off.
 
+![no-alignment]({{ site.url }}{{ site.baseurl }}/assets/images/Scope_test_bench.PNG)
+
 Controller requirements (supply voltage 24 (Vb)):
 
   Signal ON
