@@ -21,7 +21,7 @@ feature_row:
     title: "Dean's Choice awarded Capstone Project"
     excerpt: >
       The perfect project that challenged a **team of four and I**, where we caught the attention of **CHCH news**, Hamilton's local news network and the **praise of our professor**! <br />
-    url: "/docs/layouts/"
+    url: "/docs/Grader/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
   - image_path: /assets/images/grader_home_page.jpg
