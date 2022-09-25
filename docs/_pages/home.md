@@ -28,7 +28,7 @@ feature_row:
     alt: "100% free"
     title: "Grader Project"
     excerpt: "An enormous undertaking as the **main Controls Designer** for this project. Where I took a major step into the **mining industry** and by taking that step applied everything I knew as an Engineering Physics graduate. Definitely my proudest achievement thus far!   "
-    url: "/docs/layout-header-image-text-readability/"
+    url: "/docs/Grader_Project/"
     btn_class: "btn--primary"
     btn_label: "Find out more"      
 ---
