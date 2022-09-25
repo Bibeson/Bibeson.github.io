@@ -1,5 +1,6 @@
 ---
 title: "Grader Project"
+permalink: /docs/Grader_Project/
 header:
   image: /assets/images/Grader_article_home.jpg
   # caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
