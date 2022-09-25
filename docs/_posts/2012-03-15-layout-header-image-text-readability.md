@@ -54,11 +54,11 @@ Following safety requirements such as:
 That document helped define rules I needed to follow when coding the main program. Even though the clients defined the functional requirements it was our in-house team of engineers that conducted the PHA (Process Hazard Analysis) meetings, following other ISO standards (ISO 15998,13849). In these meetings I contributed little and made it a point to learn as much as I could from the way the senior engineers would simplify problems to bring about safe measures to dangerous outcomes.
 
 | Dangerous Situation | Avoidance Measure | Software Requirements |
-|:--------|:-------:|:----------------|
-| **Unintended Startup**   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) <br><br> 1. Joystick transmission modes (N/F/R) <br><br> 2. Brake pressure sensors <br><br> 3. Operator seat contact sensor <br><br> 4. Seat belt sensor |
-| **Unintended movement** (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <br><br> 1. Moldboard valves enable button <br><br> 2. Operator seat contact sensor <br><br> 3. Feedback sensors <br><br> 4. Joystick command |
+|:--------|:-------:|:--------|
+| **Unintended Startup**   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) <br><br> **1.** Joystick transmission modes (N/F/R) <br><br> **2.** Brake pressure sensors <br><br> **3.** Operator seat contact sensor <br><br> **4.** Seat belt sensor |
+| **Unintended movement** (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <br><br> **1.** Moldboard valves enable button <br><br> **2.** Operator seat contact sensor <br><br> **3.** Feedback sensors <br><br> **4.** Joystick command |
 |----
-| **Intended movement** (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <br><br> 1. Moldboard valves enable button <br><br> 2. Operator seat contact sensor <br><br> 3. Feedback sensors <br><br> 4. Joystick command |
+| **Intended movement** (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <br><br> **1.** Moldboard valves enable button <br><br> **2.** Operator seat contact sensor <br><br> **3.** Feedback sensors <br><br> **4.** Joystick command |
 {: rules="groups"}
 
 
