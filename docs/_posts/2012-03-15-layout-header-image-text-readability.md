@@ -55,11 +55,12 @@ That document helped define rules I needed to follow when coding the main progra
 
 | Dangerous Situation | Avoidance Measure | Software Requirements |
 |:--------|:-------:|--------:|
-| Unintended Startup   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) <br> 1. Joystick transmission modes (N/F/R) <br> 2. Brake pressure sensors <br> 3. Operator seat contact sensor <br> 4. Seat belt sensor {: style="text-align: left;"} |
+| Unintended Startup   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) <br> 1. Joystick transmission modes (N/F/R) <br> 2. Brake pressure sensors <br> 3. Operator seat contact sensor <br> 4. Seat belt sensor |
 | Unintended movement (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <ul><li>Moldboard valves enable button</li><li>Operator seat contact sensor</li></ul><ul><li>Feedback sensors</li><li>Joystick command</li></ul> |
 |----
 | Intended movement (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <ul><li>Moldboard valves enable button</li><li>Operator seat contact sensor</li></ul><ul><li>Feedback sensors</li><li>Joystick command</li></ul>  |
 {: rules="groups"}
+{: style="text-align: left;"}
 
 I also read documentation regarding I/O modules and peripheral ECU’s (electronic control units) to configure them to our purposes for the grader. Communication with the I/O modules were crucial due to having many sensors throughout the grader. This eliminated unnecessary wiring and allowed information to be transmitted through the many CAN networks to be received by the master controller. The documentation for the peripheral ECU’s helped interpreting the values and error codes being sent over the CAN Network. The peripheral ECU’s that I worked with are as follows:
 
