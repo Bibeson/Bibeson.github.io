@@ -4,10 +4,10 @@ permalink: /docs/Grader_Project/
 header:
   image: /assets/images/Grader_article_home.jpg
   # caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-tags: 
-  - sample post
-  - readability
-  - test
+# tags: 
+#  - sample post
+#  - readability
+#  - test
 toc: true
 toc_sticky: true
 ---
