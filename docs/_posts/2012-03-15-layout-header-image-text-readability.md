@@ -55,10 +55,10 @@ That document helped define rules I needed to follow when coding the main progra
 
 | Dangerous Situation | Avoidance Measure | Software Requirements |
 |:--------|:-------:|:--------|
-| **Unintended Startup**   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) <br> 1. Joystick transmission modes (N/F/R) <br> 2. Brake pressure sensors <br> 3. Operator seat contact sensor <br> 4. Seat belt sensor |
-| **Unintended movement** (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <ul><li>Moldboard valves enable button</li><li>Operator seat contact sensor</li></ul><ul><li>Feedback sensors</li><li>Joystick command</li></ul> |
+| **Unintended Startup**   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals) <br><br> 1. Joystick transmission modes (N/F/R) <br><br> 2. Brake pressure sensors <br><br> 3. Operator seat contact sensor <br><br> 4. Seat belt sensor |
+| **Unintended movement** (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <br><br> 1. Moldboard valves enable button <br><br> 2. Operator seat contact sensor <br><br> 3. Feedback sensors <br><br> 4. Joystick command |
 |----
-| **Intended movement** (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <ul><li>Moldboard valves enable button</li><li>Operator seat contact sensor</li></ul><ul><li>Feedback sensors</li><li>Joystick command</li></ul>  |
+| **Intended movement** (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  <br><br> 1. Moldboard valves enable button <br><br> 2. Operator seat contact sensor <br><br> 3. Feedback sensors <br><br> 4. Joystick command |
 {: rules="groups"}
 
 
