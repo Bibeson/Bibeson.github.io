@@ -1,5 +1,5 @@
 ---
-title:  "Exclude Post from Search Index"
+title:  "Exclude Post from Search Indexaroo"
 search: false
 categories: 
   - Jekyll
