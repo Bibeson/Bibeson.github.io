@@ -2,8 +2,8 @@
 title:  "Dean's Choice Awarded Capstone Project"
 header:
   video:
-    id: -PVofD2A9t8
-    provider: youtube
+    id: 753615464
+    provider: vimeo
 # search: false
 # categories: 
 #  - Jekyll
