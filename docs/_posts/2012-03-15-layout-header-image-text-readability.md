@@ -55,7 +55,7 @@ That document helped define rules I needed to follow when coding the main progra
 
 | Dangerous Situation | Avoidance Measure | Software Requirements |
 |:--------|:-------:|--------:|
-| Unintended Startup   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals)  <ul><li>item1</li><li>item2</li></ul>  |
+| Unintended Startup   | Vehicle needs to be in neutral, parking brakes need to be applied, operator needs to be in seat and seat belt is worn to enable startup   | Dual channel (primary and redundant signals)  <ul><li>Joystick transmission modes (N/F/R)</li><li>Brake pressure sensors</li></ul> <ul><li>Operator seat contact sensor</li><li>Seat belt sensor</li></ul>  |
 | Unintended movement (moldboard functions) - no request made by operator, but movement detected  | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel * Moldboard valves enable button  * Operator seat contact sensor  * Feedback sensors  * Joystick command|
 |----
 | Intended movement (moldboard functions) - request made by operator, but no movement detected   | Moldboard valves enabled, feedback sensors, joystick command monitored, operator needs to be in seat   | Dual channel  * Moldboard valves enable button  * Operator seat contact sensors * Feedback sensors  * Joystick command   |
