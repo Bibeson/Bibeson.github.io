@@ -49,17 +49,67 @@ The basic theory of the optical TOF sensor is quite similar to that of tradition
 Due to the extreme directional properties of the above LIDAR devices, the most effective solution was found to be a combination of the two sensors mounted on the front of the launcher. This effectively decreases the directionality of the LIDAR measurements and increases the probability that the beam will fall on the target. In order to determine the devices suitability to this project they must be capable of detecting the player given the resolution of the Yaw motor control.
 
 
+
 ## Module 3 Pitch & Yaw
 The pitch and yaw of the launcher will be controlled by a linear actuator and a planetary gear motor respectively. The accuracy performance will be tested indoors and will be expected to follow a soccer player traveling perpendicular to the launcher, at a maximum speed of 44 km/h, or 12m/s (Usain Bolt's record) at a distance of 10 meters in front of the launcher. With these specifications straining the pitch and yaw motor controls the most, the launcher will be able to follow any person within the range of our sensors.
 
 ## Module 4 Ball Launcher
 The ball launching system consists of a hopper that is capable of storing five balls that feed into the launching mechanism, which is itself comprised of two motors rotating in opposite directions mounted on either side of a rail to guide the balls. Varying the rotational speed of the launcher motors will modify the speed at which the ball leaves the launcher, and by extension the distance it is able to travel. The central program of the device will determine an appropriate launching speed based on the distance that the player is from the launcher, where on the target (head, chest, feet) the ball is set to be aimed, and the level of speed at which the ball should be travelling when it reaches the player. For stationary targets and moving target, the launcher is be able to launch the ball within a range of 5 to 25 meters. 
 
+The general design of the ball launcher utilizes a dual flywheel configuration. The key factor for pursuing this design, with the flywheels oriented horizontally, as opposed to vertically or at some offset angle, was the fact that the device ideally would be able to create curved shots, similar to those achieved by actual players. This curve is achieved by having a difference in the wheels speeds relative to each other in order to generate spin on the ball. This spin causes the ball trajectory to curve in one direction or the other depending on the motion of the spin. Having the flywheels oriented horizontally is the only way to generate this curve consistently. Having the flywheels oriented vertically would allow for adding topspin or backspin to the ball. For the overall functionality of this device however, it was thought that the ability to curve the ball was more desirable than generating topspin or backspin.
+
+Additionally, this configuration is used by many commercial ball launching systems and research into a number of alternatives for the launching mechanism and the relatively large distance requirements of our device indicated that this mechanism was likely the best option to pursue in terms of performance, available supplemental mechanism information, and cost.
+
+Based on the mathematical modeling, motors were sourced that had the ability to provide substantially more torque and speed than was required to ensure that the required distance specs could be met with a healthy margin for error when accounting for various losses, while still being generally affordable. 
+
+The motors needed to be controlled individually. This enables curve to be generated on the ball by varying the relative speeds of each motor, and also helps account for the fact that DC brushed motors often don’t spin as fast in one direction as the other at a given voltage, and the motors will be spinning in opposite directions to one another. A commercial motor driver module was used that has a number of other features such as thermal protection to prevent overheating and current limit protection to prevent damage, that improve its reliability.
+
+PID methods are widely used forms of control systems where continuous control is required. Essentially, a PID controller is continuously fed data on a process variable which it compares to a setpoint or desired value for that variable. The difference between the setpoint and process variable value is then calculated and known as the error term. The control system then applies corrections to the system using this error term and proportional, integral, and derivative correction factors.
+
+The PID control function can be expressed as follows:
+
+The coefficients Kp, Ki, and Kd are for the proportional, integral, and derivative factors, respectively.  Kp is the proportional coefficient and works to correct for current error values, simply multiplying the error term by some constant value, leading to large outputs when the error is large and small output when the error term is small. Ki is the integral coefficient and works to correct for past accumulation of errors, helping to eliminate residual errors that may accumulate over time. Finally, the Kd term is used to estimate and correct for future errors in the system by accounting for the rate of change of the error term in the system.
+
+The effects of the three process coefficients are summarized in the table below:
+
+This control function variable u(t) is then fed back into the system and is used by some device which can affect the state of the system, such as a motor or actuator. The value of the u(t) term affects the extent to which the control device affects the system, allowing for correction of the system to reach the setpoint. These coefficients can then be tuned, with different values being optimal for different systems due to the nature of the systems and their responses, with the goal being a system response that is essentially critically damped, quickly approaching the setpoint without overshooting or oscillating around that point.
+
+One method of tuning, and the one that serves as the basis of tuning in this project, is the Zeigler-Nichols method. It is a general guideline that can often be used to get good results for a PID control system. The general methodology for this tuning process involves increasing Kp until stable oscillations are present. This value of Kp is the then noted as the ultimate gain, Ku. Tu is the period of oscillation when the ultimate gain is used. The Ki and Kd terms can then be included based on the values of Ku and Tu in order to reduce oscillations and overshoot, generally resulting in reasonably good control parameters. Specific values for the Ziegler-Nichols method are shown in the table below:
+
+The PID process only relies on knowledge of the process variable being monitored and thus can be quite versatile. This is because it requires no knowledge of various factors that may affect the process variable, allowing for very complex processes to be controlled through PID mechanisms.
+
+In order to use a PID feedback system for controlling the motor speed, it is necessary to have some sort of device to measure the actual speed of the motors. Therefore, attached to the shaft of each motor is a rotary encoder to give precise feedback on the speed of each motor, since just the voltage may not be perfectly indicative of the actual rotational speed. The encoder consists of an acrylic wheel mounted to the shaft with one hole drilled near the edge. A photo interrupter module (consists of an IR LED and receiver) is mounted near the edge of the acrylic disk, and every time the hole in the disk passes through the photointerrupter, a pulse is generated that signals an interrupt on the Arduino which then records the time of the pin transition. By keeping track of the time between subsequent pulses, the motor speed can be determined.
+
+The Arduino then reads the speed feedback from the encoders and using a PID control system, compares the actual RPM against the user input RPM, and makes the required corrections to the PWM signal controlling the motor speed until the actual and desired speeds are more or less equivalent.
+
 ## Module 5 Wireless Comunication
 Wireless communication for this system is required to communicate data from the player to the launcher, and from the targets to the launcher. Wireless communication in this project is handled by a collection of modules, a type of 2.4 GHz wireless transceiver capable of interfacing with an arduino. The wifi module can be connected to the Arduino using the supply voltage, ground and two supporting pins for Tx/Rx communication.
 
-The wireless module was chosen due to its affordability, extensive catalogue of operating resources, and large maximum operating range of 100 metres (in ideal conditions). It is capable of communicating consistently and with a high success rate via serial communication. Being the principal means of communication between the player and the launcher, initial plans for the wearable envisioned its mounted Arduino communicating directly to the launcher’s onboard Raspberry Pi. After preliminary testing of this design; however, wireless serial communication between the Pi and Arduino was found to have a significantly higher failure rate when compared to direct Arduino-to-Arduino communication. Testing of the Pi-to-Arduino pair was conducted via Arduino code which would transmit a desired string and an appropriate Pi Python code which would receive the transmission, decode the message and print it. The error encountered caused the terminal to display random values following the expected introductory print statement (“Your message is:”), rather than the array of numbers which would then be decoded by the python script into “Hello World!”. Upon further investigation, it is believed that the cause of this failure is rooted in the NRF24L01 Python library: the clocking speed of the module was too high for the Pi to properly process. This theory was later supported with additional testing, by adding a line to the module to change the clock speed.
+The wireless module was chosen due to its affordability, extensive catalogue of operating resources, and large maximum operating range of 100 metres (in ideal conditions). It is capable of communicating consistently and with a high success rate via serial communication. Being the principal means of communication between the player and the launcher.
 
+The modules used for the wireless communication can be configured as either a transmitter or receiver and can be switched back and forth as necessary. They cannot both receive and transmit data at the same time though, so the configuration for the system needed to be carefully considered, in order to avoid potential timing issues that would arise when trying to have the devices switch roles and then determine time frames for them to be listening/transmitting. To avoid this, the system was designed so that the central launcher module always acts as the master/transmitter, and then there are five slaves/receivers for the 4 targets and the player. 
+
+This is possible because the module has a useful feature where the receiver can pre-buffer information that is automatically sent back to the transmitter when a signal is received, through an automatic acknowledge function. As soon as the receiver receives any data from the master, it automatically sends back a predetermined value to the master without ever having to switch roles. 
+
+The system is then broken down into three sections:
+
+### Launcher (Master)
+ - Always a transmitter
+ - Will send an initialization signal (an integer from 1-5 representing a difficulty value) to the designated target to initialize that target
+ - After initialization, the master then periodically polls the target to see if the ball has gone through the target to get the ball speed; the master polls the slaves every 10 ms
+ - Also polls the player to see if it receives an integer representing a designated voice command
+
+### Target (Slaves)
+ - Always a receiver
+ - Waits for a signal of the ball being detected, and it then buffers a float representing the ball speed to be sent back to the launcher when prompted
+
+### Player (Slave)
+ - Always a receiver
+ - Waits for a voice control signal from the player and if detected, it buffers an integer representing that command to be sent back to the launcher when prompted
+
+The flowchart for the operation of the master wireless communication system is as follows:
+
+The flowchart for the operation of the player (slave) wireless communication system is as follows:
 
 ## Module 6 Voice Control/Wearable Device
 Player and device interaction will utilize voice recognition features and a touch screen interface on the launcher. This software is known to be reliable, has shown positive results when tested and allows the voice recognition system on S.T.A.R.S. to achieve a final success rate for processing voice commands at an acceptable rate. This task is made easier through the use of keyword recognition, as opposed to more general recognition. This will include an activation word and preset command phrases for which the system is trained on. The communication between the wearable microphone and launcher will likely result in some lag, meaning the collective system should be able to display a speech to text output on the touchscreen interface within a 5 second period of the user issuing a command.
