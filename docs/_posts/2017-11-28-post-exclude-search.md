@@ -11,6 +11,10 @@ last_modified_at: 2022-09-25 T08:06:00-05:00
 toc: true
 toc_sticky: true
 ---
+<figure style="width: 1200px">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/Stars_home_page_art1.png" alt="">
+  <figcaption>Massive image comment for your eyeballs.</figcaption>
+</figure> 
 
 In addition to my practice in nuclear research, I also have experience in Software design and development. These skills were honed throughout my final year capstone project, in which I was one part of the 5 student team in developing and manufacturing an automated motion tracking and response system for advanced soccer training.
 
