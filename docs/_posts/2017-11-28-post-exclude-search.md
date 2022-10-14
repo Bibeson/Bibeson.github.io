@@ -8,6 +8,8 @@ header:
 # categories: 
 #  - Jekyll
 last_modified_at: 2022-09-25 T08:06:00-05:00
+toc: true
+toc_sticky: true
 ---
 
 In addition to my practice in nuclear research, I also have experience in Software design and development. These skills were honed throughout my final year capstone project, in which I was one part of the 5 student team in developing and manufacturing an automated motion tracking and response system for advanced soccer training.
