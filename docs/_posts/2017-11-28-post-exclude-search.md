@@ -26,7 +26,7 @@ The stereoscopic vision system utilizes two cameras housed on the body of the la
 
 Using two cameras, it is easy to calculate the distance of an object without knowing its size. This can be done knowing the focal length of the camera, baseline seperation between the cameras, pixel size of the camera and the disparity value (the difference in pixel position for an object appearing in either camera). As the focal length and pixel size are inherent camera properties and the baseline separation should not change while the camera are in operation, the distance is directly and inversely related to the disparity between the cameras. When disparity is minimized, this correlates to a higher distance, and vice versa.
 
-![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopic_camera.png){: .align-right}
+![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopic_camera_double.png){: .align-right}
 
 The higher the pixel resolution of the cameras used, the greater the range of possible disparity values. This results in a higher accuracy and range of distances that can measured. In recognition of the dependency between disparity and pixel size, this relationship was taken into account when considering available camera options. 8 megapixel cameras compatible with the Raspberry Pi were therefore acquired for the purposes of implementing stereo vision.
 
