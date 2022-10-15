@@ -22,7 +22,7 @@ The goal of this device was to be an accurate, portable, versatile and an access
 ## Module 1 Stereoscopic
 The stereoscopic vision system utilizes two cameras housed on the body of the launcher that provides the system with a large field of view. The tracking system is able to recognize a player and determine the distance in the X and Y planes from the launcher to the player within 0.5 seconds using a colour tracking algorithm. For this to work, the player is required to wear a jersey of a specfic colour. This data is used to rotate and aim the launcher toward the player and adjust the speed of launcher the motors to deliver the ball to the target player with a high degree of accuracy.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopics.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopics_stars.png){: .align-center}
 
 Using two cameras, it is easy to calculate the distance of an object without knowing its size. This can be done knowing the focal length of the camera, baseline seperation between the cameras, pixel size of the camera and the disparity value (the difference in pixel position for an object appearing in either camera). As the focal length and pixel size are inherent camera properties and the baseline separation should not change while the camera are in operation, the distance is directly and inversely related to the disparity between the cameras. When disparity is minimized, this correlates to a higher distance, and vice versa.
 
