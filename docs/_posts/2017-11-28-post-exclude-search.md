@@ -1,6 +1,7 @@
 ---
 title:  "Dean's Choice Awarded Capstone Project"
 header:
+  image: /assets/images/Grader_article_home.jpg
   video:
     id: 753615464
     provider: vimeo
