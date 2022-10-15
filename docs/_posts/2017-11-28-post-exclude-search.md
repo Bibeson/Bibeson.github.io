@@ -1,10 +1,9 @@
 ---
 title:  "Dean's Choice Awarded Capstone Project"
 header:
-  image: /assets/images/Stars_home_page_art1.png
-  # video:
-  #  id: 753615464
-  #  provider: vimeo
+   video:
+    id: 753615464
+    provider: vimeo
 # search: false
 # categories: 
 #  - Jekyll
