@@ -54,6 +54,8 @@ A laser range finder emits a pulse of laser at a target. The pulse then reflects
 
 Initial considerations were to utilize a cheaper and also simpler TOF method as an attempt to innovate a relatively stagnant technology, however the optical TOF distance sensor is a much more capable and robust solution to this problem. The operating frequencies of the optical sensor (GHz) to achieve a more reliable result than the ultrasonic TOF sensors could achieve. Given the complexity of the high frequency circuitry, these sensors are impractical to engineer within the given time frame at the time, thus the two devices were chosen for testing. Interfacing to the device is done via a custom programmable microcontroller that provides serial output, which will be used to obtain the range via a Python function.
 
+{% include video id="760817169" provider="vimeo" %}
+
 Testing of the first device to detect a person in outdoor and indoor conditions showed accurate results between 0-15 meters, but had a difficult time detecting the player beyond this. Tests performed by directing the sensor at a wall or large surface produced more reliable results between 15-30 meters. In practice the maximum range of the device is 30 meters dependent on ambient lighting, while the range for a small target (person ~45 cm wide, 180 cm tall) drops off around 15 meters, due to reduced reflectance of the target.
 
 The second device provided a more reliable result to as much as 25 meters (dependant on the ambient lighting/interference), however the lower FOV will restrict its usability at these ranges due to resolution of the Yaw positioning motor depending on the gear ratio and programming.
