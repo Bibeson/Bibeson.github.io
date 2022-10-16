@@ -61,7 +61,9 @@ Testing of the first device to detect a person in outdoor and indoor conditions 
 The second device provided a more reliable result to as much as 25 meters (dependant on the ambient lighting/interference), however the lower FOV will restrict its usability at these ranges due to resolution of the Yaw positioning motor depending on the gear ratio and programming.
 
 The basic theory of the optical TOF sensor is quite similar to that of traditional ultrasonic sensors, the main difference of course being the speed of the wave (C_air). A major challenge in the manufacture of such sensors is the alignment of the optical axis and spacing on the PCB as a result of manufacturing tolerances. As a result, the receiving photodiode must have a greater FOV (field of view) than the transmitter, since the FOV has a great impact on the amount of ambient light and signal collection, there is a clear tradeoff between FOV and performance. The devive we choose is an example of a multi-zone arrangement, an attempt to improve performance while maintaining FOV, uses multiple transmitting LED’s.The second device uses a diode laser (Class 1: CE Certified), giving it a much more narrow FOV, both devices use infrared light at ~950 nm.
- 
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Multi-zone_LRF.png){: .align-center}
+
 Due to the extreme directional properties of the above LIDAR devices, the most effective solution was found to be a combination of the two sensors mounted on the front of the launcher. This effectively decreases the directionality of the LIDAR measurements and increases the probability that the beam will fall on the target. In order to determine the devices suitability to this project they must be capable of detecting the player given the resolution of the Yaw motor control.
 
 ## Module 3 Pitch & Yaw
