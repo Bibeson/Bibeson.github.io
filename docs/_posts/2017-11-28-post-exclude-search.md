@@ -71,7 +71,7 @@ The purpose of the pitch and yaw motor control is to set up the initial conditio
 
 <figure class="half">
 	<a href="/assets/images/Planet_gear_pushed.png"><img src="/assets/images/Planet_gear_pushed.png"></a>
-	<a href="/assets/images/Planet_gear_tension.png"><img src="Planet_gear_tension.png"></a>
+	<a href="/assets/images/Planet_gear_tension.png"><img src="/assets/images/Planet_gear_tension.png"></a>
 	<figcaption>.</figcaption>
 </figure>
 
