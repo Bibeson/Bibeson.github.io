@@ -188,7 +188,11 @@ The system is then broken down into three sections:
 
 The flowchart for the operation of the master wireless communication system is as follows:
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Master_wireless_com.png){: .align-center}
+
 The flowchart for the operation of the player (slave) wireless communication system is as follows:
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Slave_wireless_com.png){: .align-center}
 
 ## Module 6 Voice Control/Wearable Device
 Player and device interaction will utilize voice recognition features and a touch screen interface on the launcher. This software is known to be reliable, has shown positive results when tested and allows the voice recognition system on S.T.A.R.S. to achieve a final success rate for processing voice commands at an acceptable rate. This task is made easier through the use of keyword recognition, as opposed to more general recognition. This will include an activation word and preset command phrases for which the system is trained on. The communication between the wearable microphone and launcher will likely result in some lag, meaning the collective system should be able to display a speech to text output on the touchscreen interface within a 5 second period of the user issuing a command.
