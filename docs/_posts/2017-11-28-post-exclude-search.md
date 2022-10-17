@@ -137,9 +137,13 @@ PID methods are widely used forms of control systems where continuous control is
 
 The PID control function can be expressed as follows:
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/PID_Equation.png){: .align-center}
+
 The coefficients Kp, Ki, and Kd are for the proportional, integral, and derivative factors, respectively.  Kp is the proportional coefficient and works to correct for current error values, simply multiplying the error term by some constant value, leading to large outputs when the error is large and small output when the error term is small. Ki is the integral coefficient and works to correct for past accumulation of errors, helping to eliminate residual errors that may accumulate over time. Finally, the Kd term is used to estimate and correct for future errors in the system by accounting for the rate of change of the error term in the system.
 
 The effects of the three process coefficients are summarized in the table below:
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/PID_Table.png){: .align-center}
 
 This control function variable u(t) is then fed back into the system and is used by some device which can affect the state of the system, such as a motor or actuator. The value of the u(t) term affects the extent to which the control device affects the system, allowing for correction of the system to reach the setpoint. These coefficients can then be tuned, with different values being optimal for different systems due to the nature of the systems and their responses, with the goal being a system response that is essentially critically damped, quickly approaching the setpoint without overshooting or oscillating around that point.
 
