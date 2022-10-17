@@ -109,7 +109,6 @@ Bringing the focus back to the program flow, once the distance to the player is 
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Linear_pitch_flowchart.png){: .align-center}
 
-
 ## Module 4 Ball Launcher
 The ball launching system consists of a hopper that is capable of storing five balls that feed into the launching mechanism, which is itself comprised of two motors rotating in opposite directions mounted on either side of a rail to guide the balls. Varying the rotational speed of the launcher motors will modify the speed at which the ball leaves the launcher, and by extension the distance it is able to travel. The central program of the device will determine an appropriate launching speed based on the distance that the player is from the launcher, where on the target (head, chest, feet) the ball is set to be aimed, and the level of speed at which the ball should be travelling when it reaches the player. For stationary targets and moving target, the launcher is be able to launch the ball within a range of 5 to 25 meters. 
 
