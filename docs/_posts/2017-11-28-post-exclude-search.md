@@ -162,7 +162,7 @@ The Arduino then reads the speed feedback from the encoders and using a PID cont
 ## Module 5 Wireless Comunication
 Wireless communication for this system is required to communicate data from the player to the launcher, and from the targets to the launcher. Wireless communication in this project is handled by a collection of modules, a type of 2.4 GHz wireless transceiver capable of interfacing with an arduino. The wifi module can be connected to the Arduino using the supply voltage, ground and two supporting pins for Tx/Rx communication.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wireless_com.jpg){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wireless_com.png){: .align-center}
 
 The wireless module was chosen due to its affordability, extensive catalogue of operating resources, and large maximum operating range of 100 metres (in ideal conditions). It is capable of communicating consistently and with a high success rate via serial communication. Being the principal means of communication between the player and the launcher.
 
