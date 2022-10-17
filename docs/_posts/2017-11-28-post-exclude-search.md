@@ -118,12 +118,21 @@ The ball launching system consists of a hopper that is capable of storing five b
 
 The general design of the ball launcher utilizes a dual flywheel configuration. The key factor for pursuing this design, with the flywheels oriented horizontally, as opposed to vertically or at some offset angle, was the fact that the device ideally would be able to create curved shots, similar to those achieved by actual players. This curve is achieved by having a difference in the wheels speeds relative to each other in order to generate spin on the ball. This spin causes the ball trajectory to curve in one direction or the other depending on the motion of the spin. Having the flywheels oriented horizontally is the only way to generate this curve consistently. Having the flywheels oriented vertically would allow for adding topspin or backspin to the ball. For the overall functionality of this device however, it was thought that the ability to curve the ball was more desirable than generating topspin or backspin.
 
+<figure class="half">
+	<a href="/assets/images/Ball_hooper_1.png"><img src="/assets/images/Ball_hooper_1.png"></a>
+	<a href="/assets/images/Ball_hooper_2.png"><img src="/assets/images/Ball_hooper_2.png"></a>
+	<figcaption>.</figcaption>
+</figure>
+
+
 Additionally, this configuration is used by many commercial ball launching systems and research into a number of alternatives for the launching mechanism and the relatively large distance requirements of our device indicated that this mechanism was likely the best option to pursue in terms of performance, available supplemental mechanism information, and cost.
 
 Based on the mathematical modeling, motors were sourced that had the ability to provide substantially more torque and speed than was required to ensure that the required distance specs could be met with a healthy margin for error when accounting for various losses, while still being generally affordable. 
 
 The motors needed to be controlled individually. This enables curve to be generated on the ball by varying the relative speeds of each motor, and also helps account for the fact that DC brushed motors often don’t spin as fast in one direction as the other at a given voltage, and the motors will be spinning in opposite directions to one another. A commercial motor driver module was used that has a number of other features such as thermal protection to prevent overheating and current limit protection to prevent damage, that improve its reliability.
 
+(vid of ball launcher 25m test)
+### PID Implementation
 PID methods are widely used forms of control systems where continuous control is required. Essentially, a PID controller is continuously fed data on a process variable which it compares to a setpoint or desired value for that variable. The difference between the setpoint and process variable value is then calculated and known as the error term. The control system then applies corrections to the system using this error term and proportional, integral, and derivative correction factors.
 
 The PID control function can be expressed as follows:
