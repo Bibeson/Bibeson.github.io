@@ -15,7 +15,7 @@ feature_row:
       As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of. <br /><br />
     url: ""
     btn_class: "btn--danger"
-    btn_label: "Out of order"
+    btn_label: "Coming Soon"
   - image_path: /assets/images/STARS_home_page.png
     alt: "fully responsive"
     title: "Dean's Choice awarded Capstone Project"
