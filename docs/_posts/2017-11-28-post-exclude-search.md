@@ -219,7 +219,7 @@ The targets consist of a durable, easily machinable ABS frame of dimensions show
 
 <figure class="third">
 	<img src="/assets/images/Target_dimensions.png">
-	<img src="/assets/images/Target_beam_placement.png">
+	<img src="/assets/images/Target_ beam_placement.png">
 	<img src="/assets/images/Target_wiring.png">
 	<figcaption></figcaption>
 </figure>
