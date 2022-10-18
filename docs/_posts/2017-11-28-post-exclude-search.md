@@ -114,16 +114,17 @@ Bringing the focus back to the program flow, once the distance to the player is 
 ## Module 4 Ball Launcher
 The ball launching system consists of a hopper that is capable of storing five balls that feed into the launching mechanism, which is itself comprised of two motors rotating in opposite directions mounted on either side of a rail to guide the balls. Varying the rotational speed of the launcher motors will modify the speed at which the ball leaves the launcher, and by extension the distance it is able to travel. The central program of the device will determine an appropriate launching speed based on the distance that the player is from the launcher, where on the target (head, chest, feet) the ball is set to be aimed, and the level of speed at which the ball should be travelling when it reaches the player. For stationary targets and moving target, the launcher is be able to launch the ball within a range of 5 to 25 meters. 
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher.jpg){: .align-center}
-
-The general design of the ball launcher utilizes a dual flywheel configuration. The key factor for pursuing this design, with the flywheels oriented horizontally, as opposed to vertically or at some offset angle, was the fact that the device ideally would be able to create curved shots, similar to those achieved by actual players. This curve is achieved by having a difference in the wheels speeds relative to each other in order to generate spin on the ball. This spin causes the ball trajectory to curve in one direction or the other depending on the motion of the spin. Having the flywheels oriented horizontally is the only way to generate this curve consistently. Having the flywheels oriented vertically would allow for adding topspin or backspin to the ball. For the overall functionality of this device however, it was thought that the ability to curve the ball was more desirable than generating topspin or backspin.
-
 <figure class="half">
 	<a href="/assets/images/Ball_hooper_1.png"><img src="/assets/images/Ball_hooper_1.png"></a>
 	<a href="/assets/images/Ball_hooper_2.png"><img src="/assets/images/Ball_hooper_2.png"></a>
 	<figcaption>.</figcaption>
 </figure>
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_feeder_flowchart.png){: .align-center}
+
+The general design of the ball launcher utilizes a dual flywheel configuration. The key factor for pursuing this design, with the flywheels oriented horizontally, as opposed to vertically or at some offset angle, was the fact that the device ideally would be able to create curved shots, similar to those achieved by actual players. This curve is achieved by having a difference in the wheels speeds relative to each other in order to generate spin on the ball. This spin causes the ball trajectory to curve in one direction or the other depending on the motion of the spin. Having the flywheels oriented horizontally is the only way to generate this curve consistently. Having the flywheels oriented vertically would allow for adding topspin or backspin to the ball. For the overall functionality of this device however, it was thought that the ability to curve the ball was more desirable than generating topspin or backspin.
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher.jpg){: .align-center}
 
 Additionally, this configuration is used by many commercial ball launching systems and research into a number of alternatives for the launching mechanism and the relatively large distance requirements of our device indicated that this mechanism was likely the best option to pursue in terms of performance, available supplemental mechanism information, and cost.
 
@@ -157,7 +158,7 @@ In order to use a PID feedback system for controlling the motor speed, it is nec
 
 The Arduino then reads the speed feedback from the encoders and using a PID control system, compares the actual RPM against the user input RPM, and makes the required corrections to the PWM signal controlling the motor speed until the actual and desired speeds are more or less equivalent.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_feeder_flowchart.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher_flowchart.jpg){: .align-center}
 
 ## Module 5 Wireless Comunication
 Wireless communication for this system is required to communicate data from the player to the launcher, and from the targets to the launcher. Wireless communication in this project is handled by a collection of modules, a type of 2.4 GHz wireless transceiver capable of interfacing with an arduino. The wifi module can be connected to the Arduino using the supply voltage, ground and two supporting pins for Tx/Rx communication.
