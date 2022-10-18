@@ -230,13 +230,27 @@ Each target is powered by a 12V battery pack in order to ensure portability and 
 
 A flowchart demonstrating the functionality of each target is shown below:
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Target_flowchart.png){: .align-center}
+
 ## Module 8 Graphical User Interface
 The screen itself will have a main menu for the user to select from a variety of drills. Each drill will possess a submenu for controlling parameters such as ball speed or pass type. 
 
-(Figure 32)
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/GUI_interface.png){: .align-center}
 
-The touchscreen user interface utilizes Pythons GUIZero and Tkinter modules for a straightforward, programmer-friendly design of a standard GUI. The code includes widgets such as Apps, Text, Pushbuttons, Images, Sliders and additional Windows. The underlying map of the GUI provides a straightforward main menu, welcoming users and offering them a choice of 3 drills: Static Passing, Predictive Passing or Manual Mode. Pseudo code for the GUI Python file may be found in the Pseudocode section of the Central Control System above. 
+The touchscreen user interface utilizes Pythons GUIZero and Tkinter modules for a straightforward, programmer-friendly design of a standard GUI. The code includes widgets such as Apps, Text, Pushbuttons, Images, Sliders and additional Windows. The underlying map of the GUI provides a straightforward main menu, welcoming users and offering them a choice of 3 drills: Static Passing, Predictive Passing or Manual Mode.
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/User_interface.png){: .align-center}
+
+Prior to drill selection, the user selects a player name from the drop down list, and a new window is opened to display the drill parameters for the players selection. These parameters can include start/pause functions, ball speed and number of targets. The below submenu as well as selection actions demonstrate the touch screen functionality.
+
+<figure class="third">
+	<img src="/assets/images/Basic_tracking_screen.png">
+	<img src="/assets/images/Predictive_tracking_screen.png">
+	<img src="/assets/images/Voice_Activated_launch_screen.png">
+	<figcaption></figcaption>
+</figure>
+
+Though the screen is very responsive to touch and maintains a locations accuracy of <0.5cm, a stylus is included for ease of use due to the very small screen size, allowing for usage without blocking of the screen from the users own hand.
 
 ## Module 9 Central Control System
 The main focus and challenge of integrating the device, is the overall control system. Since the stereoscopic system requires two Raspberry Pi's, it is necessary to include the remainder of the systems control onto the Raspberry Pi acting as a server. The reason for this is largely due to the lack of inbuilt Pi to Pi communication making way for us to use the ethernet communication port (using TCP/IP protocol) the easiest method to accomplish this goal. However, each device only has one port. Further complicating the task of control is the need to perform several continuous loops at the same time. The Python language provides many different methods/modules to do this, some of which are: multithreading, multiprocessing, and simply using the import function to add more files. Importing modules and running as processes however, limits the means by which they can share data, while the multiprocessing method is intended for more memory intensive processes. The Python multithreading module allows for multiple tasks to be performed at the same time, while still within the same process and hence the same memory space, allowing the created threads to easily share data.
