@@ -351,9 +351,9 @@ Given the limited processing power of the Raspberry Pi 3B + model, it is require
 Fabrication of a large physical machine of a scale to launch soccer balls requires some significant planning and fabrication work. Without access to any metal fabrication facilities, the ability to produce unique parts for the purposes of a prototype are usually not possible, and modelling or CAD design impractical. Utilizing available materials, a cart was constructed to act as the base and provide mobility to the device in addition to vibration dampening for hard gym floors.
 
 <figure class="third">
-	<a href="/assets/images/Fabrication_2.jpg"><img src="/assets/images/Fabrication_2.jpg"></a>
-	<a href="/assets/images/Fabrication_3.jpg"><img src="/assets/images/Fabrication_3.jpg"></a>
-	<a href="/assets/images/Fabrication_4.jpg"><img src="/assets/images/Fabrication_4.jpg"></a>
+	<a href="/assets/images/Fabrication_2.JPG"><img src="/assets/images/Fabrication_2.JPG"></a>
+	<a href="/assets/images/Fabrication_3.JPG"><img src="/assets/images/Fabrication_3.JPG"></a>
+	<a href="/assets/images/Fabrication_4.JPG"><img src="/assets/images/Fabrication_4.JPG"></a>
 	<figcaption></figcaption>
 </figure>
 
