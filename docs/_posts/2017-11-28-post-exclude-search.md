@@ -198,7 +198,7 @@ The flowchart for the operation of the player (slave) wireless communication sys
 ## Module 6 Voice Control/Wearable Device
 Player and device interaction will utilize voice recognition features and a touch screen interface on the launcher. This software is known to be reliable, has shown positive results when tested and allows the voice recognition system on S.T.A.R.S. to achieve a final success rate for processing voice commands at an acceptable rate. This task is made easier through the use of keyword recognition, as opposed to more general recognition. This will include an activation word and preset command phrases for which the system is trained on. The communication between the wearable microphone and launcher will likely result in some lag, meaning the collective system should be able to display a speech to text output on the touchscreen interface within a 5 second period of the user issuing a command.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_CAD_drawing.png){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_CAD_drawing_1.png){: .align-center}
 
 Voice activation and a user interface represent vital components in the STARS launcher system, as this will be the sole form of communication through which the player may control the device, instructing it on what and how to run. In broad terms, there are 4 main routes through which computers may perform voice recognition: simple pattern matching, which seeks to recognize individual words entirely; pattern and feature analysis, recognizing words via their key parts (e.g. vowels); language modeling and statistical analysis, where knowledge of grammar and word use allows for predictability to increase accuracy and speed; and artificial neural networks, which mimic a human brain to reliably recognize patterns in words and sounds after significant training.
 
@@ -271,7 +271,9 @@ In addition to the plethora of data I/O within the program shown, analysis and c
 Given the limited processing power of the Raspberry Pi 3B + model, it is required that much of the programming methods be implemented in an efficient manner, making use of object oriented programming methods.
  
 ## System Design and Engineering Drawings
- 
+
+{% include video id="761572783" provider="vimeo" %}
+
 Fabrication of a large physical machine of a scale to launch soccer balls requires some significant planning and fabrication work. Without access to any metal fabrication facilities, the ability to produce unique parts for the purposes of a prototype are usually not possible, and modelling or CAD design impractical. Utilizing available materials, a cart was constructed to act as the base and provide mobility to the device in addition to vibration dampening for hard gym floors.
 
 Fabrication of a large prototype typically can be done from blueprint or rough sketch, the actual constraints of the machine are relatively simple given the compromise of motors, time and budget. Designing a chain driven launcher wheel would be the ideal solution for a cheaper motor, but the fabrication cost does not justify the trade-offs. Since the wheel needs to be driven directly off the motor shaft for this reason, limiting the possible size of the wheels to something ~10 inches in diameter due to higher weights increasing the torsion on the shaft as well as increasing angular momentum and inertia.
