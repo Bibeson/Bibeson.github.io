@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Capstone" #- title: "Quick-Start Guide"
-    url: /docs/post-exclude-search/ #https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: /docs/University_Capstone/ #https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   #- title: "About"
     #url: /splash-page/ #https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Grader Project"
