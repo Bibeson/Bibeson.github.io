@@ -433,5 +433,11 @@ Concerns of the stresses to the motor shaft led to several design choices, namel
 The launcher and all modules mounted on the platform should be powered exclusively by the vehicle batteries. The two batteries, when placed in series, provide the launcher with +24 V, which requires voltage regulation to step down this voltage to power other motors and electronics mounted on the platform. Two voltage regulator circuits, outputting +5 V and +12 V respectively, were designed and developed for this purpose. +5 V is required for powering the Raspberry Pis, and +12 V is needed for powering the pitch, yaw, and ball feeder motors, the Arduinos (via the +12 V to +5 V regulator mounted on the H bridges), and the cooling fans. 
 Due to the large steps down in voltage required for each rail, switching regulators were chosen over linear regulators as the latter would dissipate too much heat and be too inefficient to maintain a stable output voltage at all times. The TPS54560 integrated circuit from Texas Instruments was chosen for this application, as it has a large range of input voltages, has a wide operating temperature range, has a relatively small PCB footprint, and can output up to 5 A. The following circuits were designed based on the suggested circuit listed in the datasheet:
 
+<figure class="half">
+	<a href="/assets/images/Voltage_reg_5_3.3.png"><img src="/assets/images/Voltage_reg_5_3.3.png"></a>
+	<a href="/assets/images/Voltage_reg_12.png"><img src="/assets/images/Voltage_reg_12.png"></a>
+	<figcaption>.</figcaption>
+</figure>
+
 These circuits are very similar to each other. The feedback pin (pin 5 on the TPS54560 chip) has an internal reference voltage set to +0.8 V, which in turn controls the output voltage via the voltage divider applied over this pin. Using the Webench simulation tool provided by Texas Instruments, both circuits were modelled and analyzed as shown below.
 
