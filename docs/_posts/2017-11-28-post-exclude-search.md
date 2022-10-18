@@ -290,10 +290,63 @@ Concerns of the stresses to the motor shaft led to several design choices, namel
 ### Chassis
 
 <figure class="third">
-	<img src="/assets/images/DRAWING 1.pdf">
-	<img src="/assets/images/DRAWING 3.pdf">
-	<img src="/assets/images/DRAWING 4.pdf">
+	<img src="/assets/images/DRAWING 1.jpg">
+	<img src="/assets/images/DRAWING 3.jpg">
+	<img src="/assets/images/DRAWING 4.jpg">
 	<figcaption></figcaption>
+</figure>
+### STARS BALL LAUNCHER
+#### Platform
+
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/DRAWING 6.jpg){: .align-center}
+
+#### Launcher Motor Supports
+
+<figure class="half">
+	<a href="/assets/images/DRAWING 7.jpg"><img src="/assets/images/DRAWING 7.jpg"></a>
+	<a href="/assets/images/DRAWING 8.jpg"><img src="/assets/images/DRAWING 8.jpg"></a>
+	<figcaption>.</figcaption>
+</figure>
+
+#### Launcher Bar Support
+
+<figure class="third">
+	<img src="/assets/images/LAUNCHER 3.jpg">
+	<img src="/assets/images/Launcher 4.jpg">
+	<img src="/assets/images/Launcher 5.jpg">
+	<figcaption></figcaption>
+</figure>
+
+#### Ball Feeder
+
+<figure class="third">
+	<img src="/assets/images/DRAWING 22.jpg">
+	<img src="/assets/images/DRAWING 23.jpg">
+	<img src="/assets/images/DRAWINGS 9.jpg">
+	<figcaption></figcaption>
+</figure>
+
+#### Stereoscopics
+
+<figure class="half">
+	<a href="/assets/images/Launcher 7.jpg"><img src="/assets/images/Launcher 7.jpg"></a>
+	<a href="/assets/images/DRAWING 16.jpg"><img src="/assets/images/DRAWING 16.jpg"></a>
+	<figcaption>.</figcaption>
+</figure>
+
+### Targets
+
+<figure class="third">
+	<img src="/assets/images/TARGET 1.jpg">
+	<img src="/assets/images/TARGET 2.jpg">
+	<img src="/assets/images/TARGET 3.jpg">
+	<figcaption></figcaption>
+</figure>
+
+<figure class="half">
+	<a href="/assets/images/TARGET 4.jpg"><img src="/assets/images/TARGET 4.jpg"></a>
+	<a href="/assets/images/TARGET 5.jpg"><img src="/assets/images/TARGET 5.jpg"></a>
+	<figcaption>.</figcaption>
 </figure>
 
 ## Power Management
