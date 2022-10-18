@@ -5,7 +5,7 @@ main:
   #- title: "About"
     #url: /splash-page/ #https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Grader Project"
-    url: /year-archive/
+    url: /docs/Grader_Project/
   #- title: "Sample Collections"
     #url: /collection-archive/
   #- title: "Sitemap"
