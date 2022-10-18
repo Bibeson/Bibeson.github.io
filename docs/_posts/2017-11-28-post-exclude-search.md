@@ -287,6 +287,8 @@ Fabrication of a large prototype typically can be done from blueprint or rough s
 
 Concerns of the stresses to the motor shaft led to several design choices, namely having the rotational axis point in the upright direction to negate the effects of gravity on the balance of the wheel. A secondary purpose of this design is to manipulate the curvature of the ball left or right. On top of the shear stress experienced by the shaft, the launch itself causes a significant reactionary force (linear torque) as the ball is pushed through the two wheels. This force at launch required some mobility to launching motor mounts to absorb some of the shack from the launch.
 
+
+### STARS BALL LAUNCHER
 ### Chassis
 
 <figure class="third">
@@ -295,7 +297,7 @@ Concerns of the stresses to the motor shaft led to several design choices, namel
 	<img src="/assets/images/DRAWING 4.jpg">
 	<figcaption></figcaption>
 </figure>
-### STARS BALL LAUNCHER
+
 #### Platform
 
 ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/DRAWING 6.jpg){: .align-center}
