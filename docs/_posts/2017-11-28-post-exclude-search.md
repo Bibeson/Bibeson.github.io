@@ -276,9 +276,25 @@ Given the limited processing power of the Raspberry Pi 3B + model, it is require
 
 Fabrication of a large physical machine of a scale to launch soccer balls requires some significant planning and fabrication work. Without access to any metal fabrication facilities, the ability to produce unique parts for the purposes of a prototype are usually not possible, and modelling or CAD design impractical. Utilizing available materials, a cart was constructed to act as the base and provide mobility to the device in addition to vibration dampening for hard gym floors.
 
+<figure class="third">
+	<img src="/assets/images/Fabrication_2.jpg">
+	<img src="/assets/images/Fabrication_3.jpg">
+	<img src="/assets/images/Fabrication_4.jpg">
+	<figcaption></figcaption>
+</figure>
+
 Fabrication of a large prototype typically can be done from blueprint or rough sketch, the actual constraints of the machine are relatively simple given the compromise of motors, time and budget. Designing a chain driven launcher wheel would be the ideal solution for a cheaper motor, but the fabrication cost does not justify the trade-offs. Since the wheel needs to be driven directly off the motor shaft for this reason, limiting the possible size of the wheels to something ~10 inches in diameter due to higher weights increasing the torsion on the shaft as well as increasing angular momentum and inertia.
 
 Concerns of the stresses to the motor shaft led to several design choices, namely having the rotational axis point in the upright direction to negate the effects of gravity on the balance of the wheel. A secondary purpose of this design is to manipulate the curvature of the ball left or right. On top of the shear stress experienced by the shaft, the launch itself causes a significant reactionary force (linear torque) as the ball is pushed through the two wheels. This force at launch required some mobility to launching motor mounts to absorb some of the shack from the launch.
+
+### Chassis
+
+<figure class="third">
+	<img src="/assets/images/DRAWING 1.pdf">
+	<img src="/assets/images/DRAWING 3.pdf">
+	<img src="/assets/images/DRAWING 4.pdf">
+	<figcaption></figcaption>
+</figure>
 
 ## Power Management
 
