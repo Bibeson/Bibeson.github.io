@@ -124,7 +124,7 @@ The ball launching system consists of a hopper that is capable of storing five b
 
 The general design of the ball launcher utilizes a dual flywheel configuration. The key factor for pursuing this design, with the flywheels oriented horizontally, as opposed to vertically or at some offset angle, was the fact that the device ideally would be able to create curved shots, similar to those achieved by actual players. This curve is achieved by having a difference in the wheels speeds relative to each other in order to generate spin on the ball. This spin causes the ball trajectory to curve in one direction or the other depending on the motion of the spin. Having the flywheels oriented horizontally is the only way to generate this curve consistently. Having the flywheels oriented vertically would allow for adding topspin or backspin to the ball. For the overall functionality of this device however, it was thought that the ability to curve the ball was more desirable than generating topspin or backspin.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher.jpg){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher_1.jpg){: .align-center}
 
 Additionally, this configuration is used by many commercial ball launching systems and research into a number of alternatives for the launching mechanism and the relatively large distance requirements of our device indicated that this mechanism was likely the best option to pursue in terms of performance, available supplemental mechanism information, and cost.
 
@@ -158,7 +158,7 @@ In order to use a PID feedback system for controlling the motor speed, it is nec
 
 The Arduino then reads the speed feedback from the encoders and using a PID control system, compares the actual RPM against the user input RPM, and makes the required corrections to the PWM signal controlling the motor speed until the actual and desired speeds are more or less equivalent.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher_flowchart.jpg){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher_flowchart.png){: .align-center}
 
 ## Module 5 Wireless Comunication
 Wireless communication for this system is required to communicate data from the player to the launcher, and from the targets to the launcher. Wireless communication in this project is handled by a collection of modules, a type of 2.4 GHz wireless transceiver capable of interfacing with an arduino. The wifi module can be connected to the Arduino using the supply voltage, ground and two supporting pins for Tx/Rx communication.
@@ -198,21 +198,31 @@ The flowchart for the operation of the player (slave) wireless communication sys
 ## Module 6 Voice Control/Wearable Device
 Player and device interaction will utilize voice recognition features and a touch screen interface on the launcher. This software is known to be reliable, has shown positive results when tested and allows the voice recognition system on S.T.A.R.S. to achieve a final success rate for processing voice commands at an acceptable rate. This task is made easier through the use of keyword recognition, as opposed to more general recognition. This will include an activation word and preset command phrases for which the system is trained on. The communication between the wearable microphone and launcher will likely result in some lag, meaning the collective system should be able to display a speech to text output on the touchscreen interface within a 5 second period of the user issuing a command.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_device.JPG){: .align-center}
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_CAD_drawing.png){: .align-center}
 
 Voice activation and a user interface represent vital components in the STARS launcher system, as this will be the sole form of communication through which the player may control the device, instructing it on what and how to run. In broad terms, there are 4 main routes through which computers may perform voice recognition: simple pattern matching, which seeks to recognize individual words entirely; pattern and feature analysis, recognizing words via their key parts (e.g. vowels); language modeling and statistical analysis, where knowledge of grammar and word use allows for predictability to increase accuracy and speed; and artificial neural networks, which mimic a human brain to reliably recognize patterns in words and sounds after significant training.
 
 Generally, some combination of the second and third methods is used to build a reliable and accurate software, while minimizing the design and training requirements. Over time, these programs have evolved with varying levels of success to give modern voice recognition software a tall set of shoulders to stand on, yielding a standard for accepted levels of function. For these reasons, it is unreasonable to consider designing this software from scratch. Not being a crucial part of the engineering design for the final concept of the system, the creation of voice recognition software would very likely not be completed within the scope of this project to the same success rate as existing products. Instead, this module of STARS has been adopted from existing solutions, each of which were found to integrate well with the overall system and best suite the desired purpose.
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_device.JPG){: .align-center}
+
 The main application of voice recognition in STARS is the integration of voice commands into the player’s wearable: in this case, Arduino-based modules are considered a simple, small and cheap method to provide reliable voice recognition to the player. This left the task of making a parts-based decision regarding an assortment of VR modules for the wearable. The EasyVR was instead chosen: the cost exceeded a few other devices. The deciding factor was the ability of the EasyVR to use both 22 preset commands, as well as include up to 32 trained custom voice commands (and a selectable trigger word). Assembled, the shield shares equal dimensions to the Arduino Uno and may easily fit on a wearable such as an athletic wristband. 
 
 The EasyVR shield utilized only 4 pins on the Arduino Uno: Voltage source (3.3-5V), ground, TX and RX. Once mounted and connected to a computer, the shield could easily be programmed and trained using the recommended EasyVR Commander software. On this GUI, up to 20 groups may be used to store personalized commands (maximum of 32 per group) which may be named and trained by the user; however, only a single group of commands may be loaded onto the shield at a single time. When programming, creating and training the commands, the shield requires a group to be selected and uploaded onto the Arduino. This is done through the generation of a custom code by the EasyVR Commander support program which defines all user groups for the shield and indicates which is going to be used. Trained voice commands are stored on the shield’s module itself, though they are defined and accessed through the custom code. Before this code can be used, it must be edited by the user in several places to indicate specific parameters such as trigger functions, bridge connection, output (speaker) connections etc., as well as to define the actions performed by each command. The final code is of the form:
 
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_device_flowchart.png){: .align-center}
 
 ## Module 7 Player Targets
 Targets would be placed around the player, typically in a half moon configuration, these small nets are equipped with break-beam sensors for goal detection. Corresponding red, blue, and green LEDs are used to indicate inactivity, initialization, and successful goal detection respectively. Detection accuracy of this system is 100% due to where the sensors have been placed with the capability of detecting ball speeds up to 15 m/s.
 
 The targets consist of a durable, easily machinable ABS frame of dimensions shown below. They have two planes of break beam sensors, with each plane having a break beam sensor at ⅓ and ⅔ of the way up the frame vertically. This ensures that the ball will always break at least one of the sensors given its size of 22 cm in diameter. The two planes are used to ensure that a ball actually passes into the net and fully crosses the goal line, and that an accidental breaking of one beam will not falsely trigger a goal event. The separation of the two planes was designed to be the same as the diameter of the ball (22 cm) to ensure that the ball is detected in the instant that it fully crosses the goal line.
+
+<figure class="third">
+	<img src="/assets/images/Target_dimensions.png">
+	<img src="/assets/images/Target_beam_placement.png">
+	<img src="/assets/images/Target_wiring.png">
+	<figcaption></figcaption>
+</figure>
 
 Each break beam sensor consists of an IR LED modulated at 38 kHz and a receiver tuned to that frequency so as to eliminate interference of DC IR light, which can be considerable in an outdoor environment. The central program determines which target should be activated, at which point it sends a signal wirelessly to that target and the LED strips mounted to the front of the target go from red to blue, signifying that the target is activated and ready to receive a ball. If the ball successfully crosses through both break beam planes, then the LED strip goes green, otherwise, the target waits for a certain period of time (determined by the difficulty setting chosen for the drill - less time for higher difficulty drills and vice versa) before the LEDs go back to red and the target waits for another input from the main program. The break beam sensors determine the speed of the incoming ball by noting the time at which the ball crosses the first plane and the second plane, using the Arduino micros() function. Since the sensors are a fixed distance apart, the speed can be found by dividing the separation distance by the time interval. 
 
@@ -222,6 +232,8 @@ A flowchart demonstrating the functionality of each target is shown below:
 
 ## Module 8 Graphical User Interface
 The screen itself will have a main menu for the user to select from a variety of drills. Each drill will possess a submenu for controlling parameters such as ball speed or pass type. 
+
+(Figure 32)
 
 The touchscreen user interface utilizes Pythons GUIZero and Tkinter modules for a straightforward, programmer-friendly design of a standard GUI. The code includes widgets such as Apps, Text, Pushbuttons, Images, Sliders and additional Windows. The underlying map of the GUI provides a straightforward main menu, welcoming users and offering them a choice of 3 drills: Static Passing, Predictive Passing or Manual Mode. Pseudo code for the GUI Python file may be found in the Pseudocode section of the Central Control System above. 
 
