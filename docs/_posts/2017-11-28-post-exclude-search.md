@@ -1,5 +1,6 @@
 ---
 title:  "Dean's Choice Awarded Capstone Project"
+permalink: /docs/University_Capstone/
 header:
    video:
     id: 753615464
