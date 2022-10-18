@@ -8,7 +8,7 @@ header:
 excerpt: >
   I’m a huge believer that you should never give up on your dreams and that hard work never fails. On this website you’ll find my milestone projects that illustrate how I’ve grown over the years.<br />
 feature_row:
-  - image_path: /assets/images/ultrasonic_range_finder.jpg
+ # - image_path: /assets/images/ultrasonic_range_finder.jpg
     alt: "customizable"
     title: "University Projects"
     excerpt: >
@@ -21,7 +21,7 @@ feature_row:
     title: "Dean's Choice awarded Capstone Project"
     excerpt: >
       The perfect project that challenged a **team of four and I**, where we caught the attention of **CHCH news**, Hamilton's local news network and the **praise of our professor**! <br />
-    url: "/docs/Grader/"
+    url: "/docs/University_Capstone/"
     btn_class: "btn--primary"
     btn_label: "Find out more"
   - image_path: /assets/images/grader_home_page.jpg
