@@ -26,11 +26,13 @@ The stereoscopic vision system utilizes two cameras housed on the body of the la
 	<a href="/assets/images/Stereoscopics_stars.png"><img src="/assets/images/Stereoscopics_stars.png"></a>
 	<figcaption></figcaption>
 </figure>
-# ![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopics_stars.png){: .align-center}
 
 Using two cameras, it is easy to calculate the distance of an object without knowing its size. This can be done knowing the focal length of the camera, baseline seperation between the cameras, pixel size of the camera and the disparity value (the difference in pixel position for an object appearing in either camera). As the focal length and pixel size are inherent camera properties and the baseline separation should not change while the camera are in operation, the distance is directly and inversely related to the disparity between the cameras. When disparity is minimized, this correlates to a higher distance, and vice versa.
 
-![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopic_camera_double.png){: .align-right}
+<figure>
+	<a href="/assets/images/Stereoscopic_camera_double.png"><img src="/assets/images/Stereoscopic_camera_double.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The higher the pixel resolution of the cameras used, the greater the range of possible disparity values. This results in a higher accuracy and range of distances that can measured. In recognition of the dependency between disparity and pixel size, this relationship was taken into account when considering available camera options. 8 megapixel cameras compatible with the Raspberry Pi were therefore acquired for the purposes of implementing stereo vision.
 
@@ -49,7 +51,10 @@ To mitigate any possible damage to the cameras, the modules are placed in cases 
 
 In essence, the operator of this setup can be expressed as shown in the flowchart below. The region of interest is determined by program looking for any contours that match the HSV colour space specifications of the colour in question. Data is transmitted from the client Raspberry Pi to the server Raspberry Pi using an Ethernet connection. The TCP/IP protocol used by the Ethernet ports is proven to be robust, reliable, and fast, which makes it a good choice for real-time communication and data transmission. This speed is necessary for ensuring the most accurate distance measurements are then passed onto be used by other modules on the launcher, and mitigates the difference in processing speed that may arise between the server and client.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Stereoscopic_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Stereoscopic_flowchart.png"><img src="/assets/images/Stereoscopic_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 ## Module 2 Laser Range Finder
 In addition to the stereoscopic vision system, a Laser Range Finder (LRF) will be used for a more precise distance measurement, making use of an optical time-of-flight (TOF) modality. This allows for the sensor to only be located on the launcher, without necessitating a receiver on the player. Having redundant distance sensors, especially ones that are each optimal at a certain range, allows for sensor fusion to select the most reliable readings.
@@ -66,7 +71,11 @@ The second device provided a more reliable result to as much as 25 meters (depen
 
 The basic theory of the optical TOF sensor is quite similar to that of traditional ultrasonic sensors, the main difference of course being the speed of the wave (C_air). A major challenge in the manufacture of such sensors is the alignment of the optical axis and spacing on the PCB as a result of manufacturing tolerances. As a result, the receiving photodiode must have a greater FOV (field of view) than the transmitter, since the FOV has a great impact on the amount of ambient light and signal collection, there is a clear tradeoff between FOV and performance. The devive we choose is an example of a multi-zone arrangement, an attempt to improve performance while maintaining FOV, uses multiple transmitting LED’s.The second device uses a diode laser (Class 1: CE Certified), giving it a much more narrow FOV, both devices use infrared light at ~950 nm.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Multi-zone_LRF.png){: .align-center}
+<figure>
+	<a href="/assets/images/Multi-zone_LRF.png"><img src="/assets/images/Multi-zone_LRF.png"></a>
+	<figcaption></figcaption>
+</figure>
+
 
 Due to the extreme directional properties of the above LIDAR devices, the most effective solution was found to be a combination of the two sensors mounted on the front of the launcher. This effectively decreases the directionality of the LIDAR measurements and increases the probability that the beam will fall on the target. In order to determine the devices suitability to this project they must be capable of detecting the player given the resolution of the Yaw motor control.
 
@@ -81,7 +90,10 @@ The purpose of the pitch and yaw motor control is to set up the initial conditio
 
 Based of the mathematical modelling the yaw motor that was selected is a planetary gear motor with a built-in rotary encoder. This motor is capable of reaching torques of about 5000 oz-in, which is magnitudes above the required maximum torque. The secondary reason this motor was chosen was because of the built-in rotary encoder fixed onto the drive shaft of the motor. A rotary encoder is capable of reading the angular position and movement of the drive shaft and converts this into a digital signal that can be decoded within the Arduino. The rotary encoder that is attached to this motor is a relative encoder. This means that the encoder conveys the angular position and movement only from the initial position the drive shaft was in. The type of sensor the encoder is using is a magnetic hall effect sensor. As the drive shaft rotates the magnetic field sensed by the sensor repeatedly returns a digital high signal. Once the magnetic field is no longer sensed, the encoder returns a digital low. The process of the signal changing from low to high and back to low is considered as two countable events. Since accuracy is a major component in the yaw motor control, the third reason this motor was chosen was for it’s planetary gearbox. The gear ratio is 368.783:1. To understand the advantage that comes with this gear ratio, the rotary encoder needs to be examined in a bit more detail. 
 
-![image-right]({{ site.url }}{{ site.baseurl }}/assets/images/Planetary_gearbox.png){: .align-right}
+<figure>
+	<a href="/assets/images/Planetary_gearbox.png"><img src="/assets/images/Planetary_gearbox.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 There are 12 magnetic segments in the wheel connected to the drive shaft and two channels that output a digital signal when a magnetic field is present. Since there are 12 magnetic segments in the wheel and two channels to record the passing of the magnetic field, the rotary encoder has 48 countable events per revolution (every 7.5˚ there will be an event) at the drive shaft. The planetary gearbox plays a strong role here as it effectively increases the accuracy. Since the gear ratio is 368.783:1, the rotary encoder will read 17,700.624 countable events per revolution (every ~0.02˚ there will be an event) at the output shaft.
 
@@ -101,11 +113,17 @@ This is a continuous feedback process between the stereoscopics and yaw motor co
 
 PID control has also been implemented onto the yaw motor control program through a PID Python library (see the Ball Launching Mechanism section for a discussion on PID control). Minimizing all sources of vibration is a must regarding the stereoscopics as this is the central unit that relays the position of the player to the yaw and pitch motor controls. Incorporating the PID library into the yaw motor control program allows for the platform to rotate more smoothly with minimal overshoot and help reduce abrupt movements, effectively reducing the amount of vibration created as well as reducing the stress on the motor.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Planetary_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Planetary_flowchart.png"><img src="/assets/images/Planetary_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The pitch motor that was selected is a 4” stroke 115 lb thrust heavy duty linear actuator. The mass that was assumed for the platform was 30 kg (66.14 lb). Even though this mass is distributed unevenly across the platform the linear actuator was selected to be able to handle the full weight of the platform. Another consideration for this selection was the built-in potentiometer that controls the position of the linear actuator. The potentiometer is rated to 10 kΩ moving one inch every 2.5 kΩ [22]. The potentiometer leads output an analog signal that ranges from 43 to 973 describing the number of steps countable between 0 to 4 inches. Unlike the yaw motor the pitch motor is very sensitive to the placement, relative to the pivot point where the launcher motors are connected to. Since the linear actuator has a stroke of 4 inches, the linear actuator needs to be 4 inches away from the pivot point. This will allow the pitch to be able to move from 0˚ to 45˚.
 
-![image-left]({{ site.url }}{{ site.baseurl }}/assets/images/Linear_motor_pitch.jpg){: .align-left}
+<figure>
+	<a href="/assets/images/Linear_motor_pitch.jpg"><img src="/assets/images/Linear_motor_pitch.jpg"></a>
+	<figcaption></figcaption>
+</figure>
 
 Measurements of the linear actuator made by the potentiometer are not absolute, but instead are relative to the last recorded position. Alternatively, the linear actuator encoder has been used to measure the pitch angle consistently. To increase the accuracy of these measurements, an accelerometer has been mounted on the launcher platform in order to measure the difference between the platform and the horizontal plane. This allows the launcher to detect when not on flat terrain, such as a bumpy field, and accommodate the pitch angle such that it remains measured with respect to the true horizontal. Further, PID control has been implemented within the code for the pitch, allowing for smoother movement of the linear actuator. An explanation of the PID function may be found in the Ball Launching Mechanism section.
 
@@ -113,7 +131,10 @@ Measurements of the linear actuator made by the potentiometer are not absolute, 
 
 Bringing the focus back to the program flow, once the distance to the player is obtained, the Raspberry Pi will continue to run the MAIN program where it will pull up the values from a Table to figure out what pitch angle is required. This specific value will then be written to the Arduino Uno. Once the Arduino has received this value, the program will first check if the launcher is on level ground. If the accelerometer attached to the pitch motor control sends a signal that does not say its on level ground the program first corrects this. This is done first in order to minimize errors on the launcher shots from one shot to the next. Once the pitch motor control is level the angle received is then checked whether the angle is positive or negative. This will distinguish which direction the pitch motor control needs to travel. Once the angle is read, the accelerometer is read by the pitch motor control program and referenced to see if the angle given by the Raspberry Pi is the same as the readings from the accelerometer. If the readings don’t match, the desired position is incremented 20 steps in either direction depending on where the desired angle is, with reference to where it is currently. Once the desired position is reached the program again awaits for the Raspberry Pi to relay a new angle. The flowchart below will assist in the understanding the code.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Linear_pitch_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Linear_pitch_flowchart.png"><img src="/assets/images/Linear_pitch_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 ## Module 4 Ball Launcher
 The ball launching system consists of a hopper that is capable of storing five balls that feed into the launching mechanism, which is itself comprised of two motors rotating in opposite directions mounted on either side of a rail to guide the balls. Varying the rotational speed of the launcher motors will modify the speed at which the ball leaves the launcher, and by extension the distance it is able to travel. The central program of the device will determine an appropriate launching speed based on the distance that the player is from the launcher, where on the target (head, chest, feet) the ball is set to be aimed, and the level of speed at which the ball should be travelling when it reaches the player. For stationary targets and moving target, the launcher is be able to launch the ball within a range of 5 to 25 meters. 
@@ -124,11 +145,17 @@ The ball launching system consists of a hopper that is capable of storing five b
 	<figcaption>.</figcaption>
 </figure>
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_feeder_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Ball_feeder_flowchart.png"><img src="/assets/images/Ball_feeder_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The general design of the ball launcher utilizes a dual flywheel configuration. The key factor for pursuing this design, with the flywheels oriented horizontally, as opposed to vertically or at some offset angle, was the fact that the device ideally would be able to create curved shots, similar to those achieved by actual players. This curve is achieved by having a difference in the wheels speeds relative to each other in order to generate spin on the ball. This spin causes the ball trajectory to curve in one direction or the other depending on the motion of the spin. Having the flywheels oriented horizontally is the only way to generate this curve consistently. Having the flywheels oriented vertically would allow for adding topspin or backspin to the ball. For the overall functionality of this device however, it was thought that the ability to curve the ball was more desirable than generating topspin or backspin.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher_1.jpg){: .align-center}
+<figure>
+	<a href="/assets/images/Ball_launcher_1.jpg"><img src="/assets/images/Ball_launcher_1.jpg"></a>
+	<figcaption></figcaption>
+</figure>
 
 Additionally, this configuration is used by many commercial ball launching systems and research into a number of alternatives for the launching mechanism and the relatively large distance requirements of our device indicated that this mechanism was likely the best option to pursue in terms of performance, available supplemental mechanism information, and cost.
 
@@ -142,19 +169,28 @@ PID methods are widely used forms of control systems where continuous control is
 
 The PID control function can be expressed as follows:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/PID_Equation.png){: .align-center}
+<figure>
+	<a href="/assets/images/PID_Equation.png"><img src="/assets/images/PID_Equation.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The coefficients Kp, Ki, and Kd are for the proportional, integral, and derivative factors, respectively.  Kp is the proportional coefficient and works to correct for current error values, simply multiplying the error term by some constant value, leading to large outputs when the error is large and small output when the error term is small. Ki is the integral coefficient and works to correct for past accumulation of errors, helping to eliminate residual errors that may accumulate over time. Finally, the Kd term is used to estimate and correct for future errors in the system by accounting for the rate of change of the error term in the system.
 
 The effects of the three process coefficients are summarized in the table below:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/PID_Table.png){: .align-center}
+<figure>
+	<a href="/assets/images/PID_Table.png"><img src="/assets/images/PID_Table.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 This control function variable u(t) is then fed back into the system and is used by some device which can affect the state of the system, such as a motor or actuator. The value of the u(t) term affects the extent to which the control device affects the system, allowing for correction of the system to reach the setpoint. These coefficients can then be tuned, with different values being optimal for different systems due to the nature of the systems and their responses, with the goal being a system response that is essentially critically damped, quickly approaching the setpoint without overshooting or oscillating around that point.
 
 One method of tuning, and the one that serves as the basis of tuning in this project, is the Zeigler-Nichols method. It is a general guideline that can often be used to get good results for a PID control system. The general methodology for this tuning process involves increasing Kp until stable oscillations are present. This value of Kp is the then noted as the ultimate gain, Ku. Tu is the period of oscillation when the ultimate gain is used. The Ki and Kd terms can then be included based on the values of Ku and Tu in order to reduce oscillations and overshoot, generally resulting in reasonably good control parameters. Specific values for the Ziegler-Nichols method are shown in the table below:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Zeigler-Nichols.png){: .align-center}
+<figure>
+	<a href="/assets/images/Zeigler-Nichols.png"><img src="/assets/images/Zeigler-Nichols.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The PID process only relies on knowledge of the process variable being monitored and thus can be quite versatile. This is because it requires no knowledge of various factors that may affect the process variable, allowing for very complex processes to be controlled through PID mechanisms.
 
@@ -162,12 +198,18 @@ In order to use a PID feedback system for controlling the motor speed, it is nec
 
 The Arduino then reads the speed feedback from the encoders and using a PID control system, compares the actual RPM against the user input RPM, and makes the required corrections to the PWM signal controlling the motor speed until the actual and desired speeds are more or less equivalent.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Ball_launcher_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Ball_launcher_flowchart.png"><img src="/assets/images/Ball_launcher_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 ## Module 5 Wireless Comunication
 Wireless communication for this system is required to communicate data from the player to the launcher, and from the targets to the launcher. Wireless communication in this project is handled by a collection of modules, a type of 2.4 GHz wireless transceiver capable of interfacing with an arduino. The wifi module can be connected to the Arduino using the supply voltage, ground and two supporting pins for Tx/Rx communication.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wireless_com.png){: .align-center}
+<figure>
+	<a href="/assets/images/Wireless_com.png"><img src="/assets/images/Wireless_com.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The wireless module was chosen due to its affordability, extensive catalogue of operating resources, and large maximum operating range of 100 metres (in ideal conditions). It is capable of communicating consistently and with a high success rate via serial communication. Being the principal means of communication between the player and the launcher.
 
@@ -193,28 +235,43 @@ The system is then broken down into three sections:
 
 The flowchart for the operation of the master wireless communication system is as follows:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Master_wireless_com.png){: .align-center}
+<figure>
+	<a href="/assets/images/Master_wireless_com.png"><img src="/assets/images/Master_wireless_com.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The flowchart for the operation of the player (slave) wireless communication system is as follows:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Slave_wireless_com.png){: .align-center}
+<figure>
+	<a href="/assets/images/Slave_wireless_com.png"><img src="/assets/images/Slave_wireless_com.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 ## Module 6 Voice Control/Wearable Device
 Player and device interaction will utilize voice recognition features and a touch screen interface on the launcher. This software is known to be reliable, has shown positive results when tested and allows the voice recognition system on S.T.A.R.S. to achieve a final success rate for processing voice commands at an acceptable rate. This task is made easier through the use of keyword recognition, as opposed to more general recognition. This will include an activation word and preset command phrases for which the system is trained on. The communication between the wearable microphone and launcher will likely result in some lag, meaning the collective system should be able to display a speech to text output on the touchscreen interface within a 5 second period of the user issuing a command.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_CAD_drawing_1.png){: .align-center}
+<figure>
+	<a href="/assets/images/Wearable_CAD_drawing_1.png"><img src="/assets/images/Wearable_CAD_drawing_1.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 Voice activation and a user interface represent vital components in the STARS launcher system, as this will be the sole form of communication through which the player may control the device, instructing it on what and how to run. In broad terms, there are 4 main routes through which computers may perform voice recognition: simple pattern matching, which seeks to recognize individual words entirely; pattern and feature analysis, recognizing words via their key parts (e.g. vowels); language modeling and statistical analysis, where knowledge of grammar and word use allows for predictability to increase accuracy and speed; and artificial neural networks, which mimic a human brain to reliably recognize patterns in words and sounds after significant training.
 
 Generally, some combination of the second and third methods is used to build a reliable and accurate software, while minimizing the design and training requirements. Over time, these programs have evolved with varying levels of success to give modern voice recognition software a tall set of shoulders to stand on, yielding a standard for accepted levels of function. For these reasons, it is unreasonable to consider designing this software from scratch. Not being a crucial part of the engineering design for the final concept of the system, the creation of voice recognition software would very likely not be completed within the scope of this project to the same success rate as existing products. Instead, this module of STARS has been adopted from existing solutions, each of which were found to integrate well with the overall system and best suite the desired purpose.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_device.JPG){: .align-center}
+<figure>
+	<a href="/assets/images/Wearable_device.JPG"><img src="/assets/images/Wearable_device.JPG"></a>
+	<figcaption></figcaption>
+</figure>
 
 The main application of voice recognition in STARS is the integration of voice commands into the player’s wearable: in this case, Arduino-based modules are considered a simple, small and cheap method to provide reliable voice recognition to the player. This left the task of making a parts-based decision regarding an assortment of VR modules for the wearable. The EasyVR was instead chosen: the cost exceeded a few other devices. The deciding factor was the ability of the EasyVR to use both 22 preset commands, as well as include up to 32 trained custom voice commands (and a selectable trigger word). Assembled, the shield shares equal dimensions to the Arduino Uno and may easily fit on a wearable such as an athletic wristband. 
 
 The EasyVR shield utilized only 4 pins on the Arduino Uno: Voltage source (3.3-5V), ground, TX and RX. Once mounted and connected to a computer, the shield could easily be programmed and trained using the recommended EasyVR Commander software. On this GUI, up to 20 groups may be used to store personalized commands (maximum of 32 per group) which may be named and trained by the user; however, only a single group of commands may be loaded onto the shield at a single time. When programming, creating and training the commands, the shield requires a group to be selected and uploaded onto the Arduino. This is done through the generation of a custom code by the EasyVR Commander support program which defines all user groups for the shield and indicates which is going to be used. Trained voice commands are stored on the shield’s module itself, though they are defined and accessed through the custom code. Before this code can be used, it must be edited by the user in several places to indicate specific parameters such as trigger functions, bridge connection, output (speaker) connections etc., as well as to define the actions performed by each command. The final code is of the form:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Wearable_device_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Wearable_device_flowchart.png"><img src="/assets/images/Wearable_device_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 ## Module 7 Player Targets
 Targets would be placed around the player, typically in a half moon configuration, these small nets are equipped with break-beam sensors for goal detection. Corresponding red, blue, and green LEDs are used to indicate inactivity, initialization, and successful goal detection respectively. Detection accuracy of this system is 100% due to where the sensors have been placed with the capability of detecting ball speeds up to 15 m/s.
@@ -222,9 +279,9 @@ Targets would be placed around the player, typically in a half moon configuratio
 The targets consist of a durable, easily machinable ABS frame of dimensions shown below. They have two planes of break beam sensors, with each plane having a break beam sensor at ⅓ and ⅔ of the way up the frame vertically. This ensures that the ball will always break at least one of the sensors given its size of 22 cm in diameter. The two planes are used to ensure that a ball actually passes into the net and fully crosses the goal line, and that an accidental breaking of one beam will not falsely trigger a goal event. The separation of the two planes was designed to be the same as the diameter of the ball (22 cm) to ensure that the ball is detected in the instant that it fully crosses the goal line.
 
 <figure class="third">
-	<img src="/assets/images/Target_dimensions.png">
-	<img src="/assets/images/Target_ beam_placement.png">
-	<img src="/assets/images/Target_wiring.png">
+	<a href="/assets/images/Target_dimensions.png"><img src="/assets/images/Target_dimensions.png"></a>
+	<a href="/assets/images/Target_ beam_placement.png"><img src="/assets/images/Target_ beam_placement.png"></a>
+	<a href="/assets/images/Target_wiring.png"><img src="/assets/images/Target_wiring.png"></a>
 	<figcaption></figcaption>
 </figure>
 
@@ -234,23 +291,33 @@ Each target is powered by a 12V battery pack in order to ensure portability and 
 
 A flowchart demonstrating the functionality of each target is shown below:
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Target_flowchart.png){: .align-center}
+<figure>
+	<a href="/assets/images/Target_flowchart.png"><img src="/assets/images/Target_flowchart.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 ## Module 8 Graphical User Interface
 The screen itself will have a main menu for the user to select from a variety of drills. Each drill will possess a submenu for controlling parameters such as ball speed or pass type. 
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/GUI_interface.png){: .align-center}
+<figure>
+	<a href="/assets/images/GUI_interface.png"><img src="/assets/images/GUI_interface.png"></a>
+	<figcaption></figcaption>
+</figure>
+
 
 The touchscreen user interface utilizes Pythons GUIZero and Tkinter modules for a straightforward, programmer-friendly design of a standard GUI. The code includes widgets such as Apps, Text, Pushbuttons, Images, Sliders and additional Windows. The underlying map of the GUI provides a straightforward main menu, welcoming users and offering them a choice of 3 drills: Static Passing, Predictive Passing or Manual Mode.
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/User_interface.png){: .align-center}
+<figure>
+	<a href="/assets/images/User_interface.png"><img src="/assets/images/User_interface.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 Prior to drill selection, the user selects a player name from the drop down list, and a new window is opened to display the drill parameters for the players selection. These parameters can include start/pause functions, ball speed and number of targets. The below submenu as well as selection actions demonstrate the touch screen functionality.
 
 <figure class="third">
-	<img src="/assets/images/Basic_tracking_screen.png">
-	<img src="/assets/images/Predictive_tracking_screen.png">
-	<img src="/assets/images/Voice_Activated_launch_screen.png">
+	<a href="/assets/images/Basic_tracking_screen.png"><img src="/assets/images/Basic_tracking_screen.png"></a>
+	<a href="/assets/images/Predictive_tracking_screen.png"><img src="/assets/images/Predictive_tracking_screen.png"></a>
+	<a href="/assets/images/Voice_Activated_launch_screen.png"><img src="/assets/images/Voice_Activated_launch_screen.png"></a>
 	<figcaption></figcaption>
 </figure>
 
@@ -258,7 +325,10 @@ Though the screen is very responsive to touch and maintains a locations accuracy
 
 ## Module 9 Central Control System
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/Control_system.png){: .align-center}
+<figure>
+	<a href="/assets/images/Control_system.png"><img src="/assets/images/Control_system.png"></a>
+	<figcaption></figcaption>
+</figure>
 
 The main focus and challenge of integrating the device, is the overall control system. Since the stereoscopic system requires two Raspberry Pi's, it is necessary to include the remainder of the systems control onto the Raspberry Pi acting as a server. The reason for this is largely due to the lack of inbuilt Pi to Pi communication making way for us to use the ethernet communication port (using TCP/IP protocol) the easiest method to accomplish this goal. However, each device only has one port. Further complicating the task of control is the need to perform several continuous loops at the same time. The Python language provides many different methods/modules to do this, some of which are: multithreading, multiprocessing, and simply using the import function to add more files. Importing modules and running as processes however, limits the means by which they can share data, while the multiprocessing method is intended for more memory intensive processes. The Python multithreading module allows for multiple tasks to be performed at the same time, while still within the same process and hence the same memory space, allowing the created threads to easily share data.
 
@@ -281,9 +351,9 @@ Given the limited processing power of the Raspberry Pi 3B + model, it is require
 Fabrication of a large physical machine of a scale to launch soccer balls requires some significant planning and fabrication work. Without access to any metal fabrication facilities, the ability to produce unique parts for the purposes of a prototype are usually not possible, and modelling or CAD design impractical. Utilizing available materials, a cart was constructed to act as the base and provide mobility to the device in addition to vibration dampening for hard gym floors.
 
 <figure class="third">
-	<img src="/assets/images/Fabrication_2.jpg">
-	<img src="/assets/images/Fabrication_3.jpg">
-	<img src="/assets/images/Fabrication_4.jpg">
+	<a href="/assets/images/Fabrication_2.jpg"><img src="/assets/images/Fabrication_2.jpg"></a>
+	<a href="/assets/images/Fabrication_3.jpg"><img src="/assets/images/Fabrication_3.jpg"></a>
+	<a href="/assets/images/Fabrication_4.jpg"><img src="/assets/images/Fabrication_4.jpg"></a>
 	<figcaption></figcaption>
 </figure>
 
@@ -296,15 +366,18 @@ Concerns of the stresses to the motor shaft led to several design choices, namel
 #### Chassis
 
 <figure class="third">
-	<img src="/assets/images/DRAWING 1.jpg">
-	<img src="/assets/images/DRAWING 3.jpg">
-	<img src="/assets/images/DRAWING 4.jpg">
+	<a href="/assets/images/DRAWING 1.jpg"><img src="/assets/images/DRAWING 1.jpg"></a>
+	<a href="/assets/images/DRAWING 3.jpg"><img src="/assets/images/DRAWING 3.jpg"></a>
+	<a href="/assets/images/DRAWING 4.jpg"><img src="/assets/images/DRAWING 4.jpg"></a>
 	<figcaption></figcaption>
 </figure>
 
 #### Platform
 
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/DRAWING 6.jpg){: .align-center}
+<figure>
+	<a href="/assets/images/DRAWING 6.jpg"><img src="/assets/images/DRAWING 6.jpg"></a>
+	<figcaption></figcaption>
+</figure>
 
 #### Launcher Motor Supports
 
@@ -317,18 +390,18 @@ Concerns of the stresses to the motor shaft led to several design choices, namel
 #### Launcher Bar Support
 
 <figure class="third">
-	<img src="/assets/images/LAUNCHER 3.jpg">
-	<img src="/assets/images/Launcher 4.jpg">
-	<img src="/assets/images/Launcher 5.jpg">
+	<a href="/assets/images/LAUNCHER 3.jpg"><img src="/assets/images/LAUNCHER 3.jpg"></a>
+	<a href="/assets/images/Launcher 4.jpg"><img src="/assets/images/Launcher 4.jpg"></a>
+	<a href="/assets/images/Launcher 5.jpg"><img src="/assets/images/Launcher 5.jpg"></a>
 	<figcaption></figcaption>
 </figure>
 
 #### Ball Feeder
 
 <figure class="third">
-	<img src="/assets/images/DRAWING 22.jpg">
-	<img src="/assets/images/DRAWING 23.jpg">
-	<img src="/assets/images/DRAWINGS 9.jpg">
+	<a href="/assets/images/DRAWING 22.jpg"><img src="/assets/images/DRAWING 22.jpg"></a>
+	<a href="/assets/images/DRAWING 23.jpg"><img src="/assets/images/DRAWING 23.jpg"></a>
+	<a href="/assets/images/DRAWINGS 9.jpg"><img src="/assets/images/DRAWINGS 9.jpg"></a>
 	<figcaption></figcaption>
 </figure>
 
@@ -343,9 +416,9 @@ Concerns of the stresses to the motor shaft led to several design choices, namel
 ### Targets
 
 <figure class="third">
-	<img src="/assets/images/TARGET 1.jpg">
-	<img src="/assets/images/TARGET 2.jpg">
-	<img src="/assets/images/TARGET 3.jpg">
+	<a href="/assets/images/TARGET 1.jpg"><img src="/assets/images/TARGET 1.jpg"></a>
+	<a href="/assets/images/TARGET 2.jpg"><img src="/assets/images/TARGET 2.jpg"></a>
+	<a href="/assets/images/TARGET 3.jpg"><img src="/assets/images/TARGET 3.jpg"></a>
 	<figcaption></figcaption>
 </figure>
 
