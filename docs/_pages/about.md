@@ -57,7 +57,7 @@ For even more demo pages check the [posts archive][year-archive].
 [categories-archive]: {{ "/categories/" | relative_url }}
 [tags-archive]: {{ "/tags/" | relative_url }}
 [year-archive]: {{ "/year-archive/" | relative_url }}
--->
+--->
 ---
 
 ## Credits
