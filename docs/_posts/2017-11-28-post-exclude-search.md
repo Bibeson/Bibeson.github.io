@@ -128,7 +128,7 @@ The pitch motor that was selected is a 4” stroke 115 lb thrust heavy duty line
 
 Measurements of the linear actuator made by the potentiometer are not absolute, but instead are relative to the last recorded position. Alternatively, the linear actuator encoder has been used to measure the pitch angle consistently. To increase the accuracy of these measurements, an accelerometer has been mounted on the launcher platform in order to measure the difference between the platform and the horizontal plane. This allows the launcher to detect when not on flat terrain, such as a bumpy field, and accommodate the pitch angle such that it remains measured with respect to the true horizontal. Further, PID control has been implemented within the code for the pitch, allowing for smoother movement of the linear actuator. An explanation of the PID function may be found in the Ball Launching Mechanism section.
 
-(VIDS - linear actuator movement)
+{% include video id="761934893" provider="vimeo" %}
 
 Bringing the focus back to the program flow, once the distance to the player is obtained, the Raspberry Pi will continue to run the MAIN program where it will pull up the values from a Table to figure out what pitch angle is required. This specific value will then be written to the Arduino Uno. Once the Arduino has received this value, the program will first check if the launcher is on level ground. If the accelerometer attached to the pitch motor control sends a signal that does not say its on level ground the program first corrects this. This is done first in order to minimize errors on the launcher shots from one shot to the next. Once the pitch motor control is level the angle received is then checked whether the angle is positive or negative. This will distinguish which direction the pitch motor control needs to travel. Once the angle is read, the accelerometer is read by the pitch motor control program and referenced to see if the angle given by the Raspberry Pi is the same as the readings from the accelerometer. If the readings don’t match, the desired position is incremented 20 steps in either direction depending on where the desired angle is, with reference to where it is currently. Once the desired position is reached the program again awaits for the Raspberry Pi to relay a new angle. The flowchart below will assist in the understanding the code.
 
@@ -164,7 +164,8 @@ Based on the mathematical modeling, motors were sourced that had the ability to 
 
 The motors needed to be controlled individually. This enables curve to be generated on the ball by varying the relative speeds of each motor, and also helps account for the fact that DC brushed motors often don’t spin as fast in one direction as the other at a given voltage, and the motors will be spinning in opposite directions to one another. A commercial motor driver module was used that has a number of other features such as thermal protection to prevent overheating and current limit protection to prevent damage, that improve its reliability.
 
-(vid of ball launcher 25m test)
+{% include video id="761932072" provider="vimeo" %}
+
 ### PID Implementation
 PID methods are widely used forms of control systems where continuous control is required. Essentially, a PID controller is continuously fed data on a process variable which it compares to a setpoint or desired value for that variable. The difference between the setpoint and process variable value is then calculated and known as the error term. The control system then applies corrections to the system using this error term and proportional, integral, and derivative correction factors.
 
@@ -442,3 +443,8 @@ Due to the large steps down in voltage required for each rail, switching regulat
 
 These circuits are very similar to each other. The feedback pin (pin 5 on the TPS54560 chip) has an internal reference voltage set to +0.8 V, which in turn controls the output voltage via the voltage divider applied over this pin. Using the Webench simulation tool provided by Texas Instruments, both circuits were modelled and analyzed as shown below.
 
+## STARS Drills & Performance Videos
+
+{% include video id="761937640" provider="vimeo" %}
+
+{% include video id="761927857" provider="vimeo" %}
