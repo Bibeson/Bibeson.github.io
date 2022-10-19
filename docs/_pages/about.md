@@ -48,7 +48,7 @@ Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your
 | [Tags Archive][tags-archive] | Posts grouped by tag. |
 
 For even more demo pages check the [posts archive][year-archive].
-
+<!--
 [header-image-post]: {{ "" | relative_url }}{% post_url 2022-09-25-Grader_Project %}
 [gallery-post]: {{ "" | relative_url }}{% post_url 2010-09-09-post-gallery %}
 [html-tags-post]: {{ "" | relative_url }}{% post_url 2013-01-11-markup-html-tags-and-formatting %}
@@ -57,7 +57,7 @@ For even more demo pages check the [posts archive][year-archive].
 [categories-archive]: {{ "/categories/" | relative_url }}
 [tags-archive]: {{ "/tags/" | relative_url }}
 [year-archive]: {{ "/year-archive/" | relative_url }}
-
+-->
 ---
 
 ## Credits
