@@ -49,14 +49,14 @@ This theme comes in nine different skins (in addition to the default one).
 
 Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
 
-[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
-[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
-[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
-[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
-[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
-[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
-[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
-[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
+[header-image-post]: https://bibeson.github.io/layout-header-image-text-readability/
+[gallery-post]: https://bibeson.github.io/post%20formats/post-gallery/
+[html-tags-post]: https://bibeson.github.io/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://bibeson.github.io/markup-syntax-highlighting/
+[sample-collection]: https://bibeson.github.io/recipes/chocolate-chip-cookies/
+[categories-archive]: https://bibeson.github.io/categories/
+[tags-archive]: https://bibeson.github.io/tags/
+[year-archive]: https://bibeson.github.io/year-archive/
 
 ## Installation
 
@@ -117,7 +117,7 @@ To install:
 
 ## Usage
 
-For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://bibeson.github.io/docs/quick-start-guide/).
 
 ---
 
@@ -148,6 +148,8 @@ To test the theme, run `bundle exec rake preview` and open your browser at `http
 ## Credits
 
 ### Creator
+**Bibeson Krishnadasan**
+- <https://github.com/bibeson>
 
 **Michael Rose**
 
