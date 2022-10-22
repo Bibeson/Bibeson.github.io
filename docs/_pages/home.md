@@ -13,7 +13,8 @@ feature_row:
     alt: ""
     title: "University Projects"
     excerpt: >
-      As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of. <br /><br />
+      As an **Engineering Physics graduate**, I hope to show you my extensive experience in **software, electrical and mechanical** design and development. Here you'll find a range of projects that I'm proud of. <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="bibesonk" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/bibesonk?trk=profile-badge">Bibeson K.</a></div>
+                 <br /><br />
     url: ""
     btn_class: "btn--danger"
     btn_label: "Coming Soon"
