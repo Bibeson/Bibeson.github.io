@@ -7,6 +7,8 @@ header:
   overlay_image: /assets/images/home_page_1.jpg
 excerpt: >
   I’m a huge believer that you should never give up on your dreams and that hard work never fails. On this website you’ll find my milestone projects that illustrate how I’ve grown over the years.<br />
+  <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="bibesonk" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/bibesonk?trk=profile-badge">Bibeson K.</a></div>
+              
 feature_row:
   - image_path: /assets/images/ultrasonic_range_finder.jpg
     alt: ""
