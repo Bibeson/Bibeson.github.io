@@ -99,7 +99,8 @@ analytics:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : "/assets/images/close_up_profile.jpg"
-  bio              : " 'Because of my **Engineering** **Physics** degree and **work** **experience**, what I bring to the table is a very diverse skillset and a passion for success.' "
+  bio              : " 'Because of my **Engineering** **Physics** degree and **work** **experience**, what I bring to the table is a very diverse skillset and a passion for success.' "<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="bibesonk" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/bibesonk?trk=profile-badge">Bibeson K.</a></div>
+              
   location         : "Mississauga, ON"
   links:
     - label: "Email"
